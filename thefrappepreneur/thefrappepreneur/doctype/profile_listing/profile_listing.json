@@ -2,18 +2,21 @@
  "actions": [],
  "autoname": "format:CM-{YY}-{#####}",
  "creation": "2024-08-24 11:37:09.901393",
+ "default_view": "Image",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
   "basic_information_section",
   "column_break_zjdy",
   "member_name",
-  "regional_area",
+  "parent_profile_listing",
+  "is_group",
+  "current_location",
   "mobile_number",
   "email_id",
   "member_type",
   "column_break_igua",
-  "final_rating",
+  "profile_rating",
   "is_frappelancer",
   "profile_stage",
   "user_id",
@@ -24,25 +27,34 @@
   "bio",
   "tab_2_tab",
   "language",
+  "language_rating",
   "social_profiles_tab",
   "pcm_social_profiles",
+  "social_profile_rating",
   "area_of_interest_tab",
   "pcm_area_of_interest",
   "skills_tab",
   "pcm_skills",
+  "skill_rating",
   "contribution_tab",
   "pcm_contribution",
+  "contribution_rating",
   "info_tab",
   "industry",
+  "industry_rating",
   "erpnext_module",
+  "erpnext_module_rating",
   "frappe_apps",
+  "frappe_apps_rating",
   "section_break_jqte",
-  "clients",
+  "pcm_clients",
   "column_break_hoit",
-  "frappe_provider",
-  "testimonials_tab",
-  "pcm_testimonials",
-  "testimonials_view"
+  "pcm_frappe_provider",
+  "section_break_lpyt",
+  "lft",
+  "rgt",
+  "old_parent",
+  "column_break_jahv"
  ],
  "fields": [
   {
@@ -52,15 +64,11 @@
    "label": "Is Frappelancer"
   },
   {
-   "fieldname": "final_rating",
-   "fieldtype": "Rating",
-   "label": "Final Rating"
-  },
-  {
    "fieldname": "profile_stage",
    "fieldtype": "Select",
    "label": "Profile Stage",
-   "options": "Registered\nRated\nApproved\nListed"
+   "options": "Registered\nRated\nApproved\nListed",
+   "permlevel": 1
   },
   {
    "default": "Open",
@@ -69,6 +77,7 @@
    "fieldtype": "Select",
    "label": "Profile Status",
    "options": "Open\nActive\nIdle",
+   "permlevel": 1,
    "reqd": 1
   },
   {
@@ -94,14 +103,6 @@
    "fieldname": "tab_2_tab",
    "fieldtype": "Tab Break",
    "label": "Languages"
-  },
-  {
-   "fieldname": "regional_area",
-   "fieldtype": "Link",
-   "in_list_view": 1,
-   "label": "Regional Area",
-   "options": "Territory",
-   "reqd": 1
   },
   {
    "fieldname": "mobile_number",
@@ -192,7 +193,7 @@
   {
    "fieldname": "info_tab",
    "fieldtype": "Tab Break",
-   "label": "Basic Info"
+   "label": "More Information"
   },
   {
    "allow_bulk_edit": 1,
@@ -216,41 +217,12 @@
    "options": "PCM Frappe Apps"
   },
   {
-   "fieldname": "clients",
-   "fieldtype": "Table MultiSelect",
-   "label": "Clients",
-   "options": "PCM Clients Table"
-  },
-  {
-   "fieldname": "frappe_provider",
-   "fieldtype": "Table MultiSelect",
-   "label": "Frappe Provider",
-   "options": "PCM Frappe Provider"
-  },
-  {
    "fieldname": "section_break_jqte",
    "fieldtype": "Section Break"
   },
   {
    "fieldname": "column_break_hoit",
    "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "testimonials_tab",
-   "fieldtype": "Tab Break",
-   "label": "Testimonials"
-  },
-  {
-   "allow_bulk_edit": 1,
-   "fieldname": "pcm_testimonials",
-   "fieldtype": "Table",
-   "label": "Testimonials",
-   "options": "PCM Testimonials"
-  },
-  {
-   "fieldname": "testimonials_view",
-   "fieldtype": "HTML",
-   "label": "Testimonials View"
   },
   {
    "fieldname": "member_name",
@@ -271,16 +243,132 @@
    "fieldname": "organization_name",
    "fieldtype": "Data",
    "label": "Organization Name"
+  },
+  {
+   "allow_bulk_edit": 1,
+   "fieldname": "pcm_clients",
+   "fieldtype": "Table",
+   "label": "Clients",
+   "options": "PCM Clients Table"
+  },
+  {
+   "allow_bulk_edit": 1,
+   "fieldname": "pcm_frappe_provider",
+   "fieldtype": "Table",
+   "label": "Frappe Provider",
+   "options": "PCM Frappe Provider"
+  },
+  {
+   "fieldname": "current_location",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Current Location",
+   "options": "PCM Location",
+   "reqd": 1
+  },
+  {
+   "fieldname": "lft",
+   "fieldtype": "Int",
+   "hidden": 1,
+   "label": "Left",
+   "no_copy": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "rgt",
+   "fieldtype": "Int",
+   "hidden": 1,
+   "label": "Right",
+   "no_copy": 1,
+   "read_only": 1
+  },
+  {
+   "default": "1",
+   "fieldname": "is_group",
+   "fieldtype": "Check",
+   "label": "Is Group"
+  },
+  {
+   "fieldname": "old_parent",
+   "fieldtype": "Link",
+   "label": "Old Parent",
+   "options": "Profile Listing"
+  },
+  {
+   "fieldname": "parent_profile_listing",
+   "fieldtype": "Link",
+   "ignore_user_permissions": 1,
+   "label": "Referred By",
+   "options": "Profile Listing",
+   "reqd": 1
+  },
+  {
+   "fieldname": "language_rating",
+   "fieldtype": "Rating",
+   "label": "Language Rating",
+   "permlevel": 1
+  },
+  {
+   "fieldname": "social_profile_rating",
+   "fieldtype": "Rating",
+   "label": "Social Profile Rating",
+   "permlevel": 1
+  },
+  {
+   "fieldname": "skill_rating",
+   "fieldtype": "Rating",
+   "label": "Skill Rating",
+   "permlevel": 1
+  },
+  {
+   "fieldname": "contribution_rating",
+   "fieldtype": "Rating",
+   "label": "Contribution Rating",
+   "permlevel": 1
+  },
+  {
+   "fieldname": "industry_rating",
+   "fieldtype": "Rating",
+   "label": "Industry Rating",
+   "permlevel": 1
+  },
+  {
+   "fieldname": "erpnext_module_rating",
+   "fieldtype": "Rating",
+   "label": "ERPNext Module Rating",
+   "permlevel": 1
+  },
+  {
+   "fieldname": "frappe_apps_rating",
+   "fieldtype": "Rating",
+   "label": "Frappe Apps Rating",
+   "permlevel": 1
+  },
+  {
+   "fieldname": "profile_rating",
+   "fieldtype": "Rating",
+   "label": "Profile Rating",
+   "permlevel": 1
+  },
+  {
+   "fieldname": "section_break_lpyt",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_jahv",
+   "fieldtype": "Column Break"
   }
  ],
  "image_field": "profile_image",
  "index_web_pages_for_search": 1,
+ "is_tree": 1,
  "links": [],
- "modified": "2024-08-24 14:17:15.406122",
+ "modified": "2024-08-24 20:47:57.993260",
  "modified_by": "Administrator",
  "module": "Thefrappepreneur",
  "name": "Profile Listing",
  "naming_rule": "Expression",
+ "nsm_parent_field": "parent_profile_listing",
  "owner": "Administrator",
  "permissions": [
   {
@@ -294,8 +382,38 @@
    "role": "System Manager",
    "share": 1,
    "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Super Admin",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "permlevel": 1,
+   "read": 1,
+   "role": "Community Member"
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Community Member",
+   "share": 1,
+   "write": 1
   }
  ],
+ "search_fields": "member_name, member_type",
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": []

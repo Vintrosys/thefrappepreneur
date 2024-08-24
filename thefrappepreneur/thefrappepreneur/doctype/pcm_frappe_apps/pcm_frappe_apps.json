@@ -14,7 +14,8 @@
    "fieldname": "rating",
    "fieldtype": "Rating",
    "in_list_view": 1,
-   "label": "Rating"
+   "label": "Rating",
+   "permlevel": 1
   },
   {
    "fieldname": "frappe_apps",
@@ -27,7 +28,7 @@
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2024-08-24 13:14:32.368436",
+ "modified": "2024-08-24 20:49:56.226137",
  "modified_by": "Administrator",
  "module": "Thefrappepreneur",
  "name": "PCM Frappe Apps",

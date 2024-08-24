@@ -7,10 +7,31 @@ from frappe.model.document import Document
 
 class ProfileListing(Document):
 	def validate(self):
+		self.update_rating()
 		self.create_user()
 
+	def update_rating(self):
+		self.language_rating = self.cal_avg_rating("language")
+		self.social_profile_rating = self.cal_avg_rating("pcm_social_profiles")
+		self.skill_rating = self.cal_avg_rating("pcm_skills")
+		self.contribution_rating = self.cal_avg_rating("pcm_contribution")
+		self.industry_rating = self.cal_avg_rating("industry")
+		self.erpnext_module_rating = self.cal_avg_rating("erpnext_module")
+		self.frappe_apps_rating = self.cal_avg_rating("frappe_apps")
+		self.profile_rating = (self.language_rating + self.social_profile_rating +self.skill_rating + self.contribution_rating + self.industry_rating + self.erpnext_module_rating + self.frappe_apps_rating)/7
+	def cal_avg_rating(self, table):
+		r = 0
+		if self.get(table):
+			for rating in self.get(table):
+				if rating.rating:
+					r += rating.rating
+			return (r/len(self.get(table)))
+		return 0
+
+
+
 	def create_user(self):
-		if self.profile_stage != "Approved" and self.user_id:
+		if self.profile_stage != "Approved" or self.user_id:
 			return
 		
 		if frappe.db.exists("User", self.email_id):

@@ -22,13 +22,13 @@
    "fieldname": "location",
    "fieldtype": "Link",
    "label": "Location",
-   "options": "Location",
+   "options": "PCM Location",
    "unique": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-08-24 13:29:18.208720",
+ "modified": "2024-08-24 19:12:41.429290",
  "modified_by": "Administrator",
  "module": "Thefrappepreneur",
  "name": "Frappe Provider",

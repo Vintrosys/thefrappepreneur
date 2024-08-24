@@ -3,6 +3,7 @@
  "allow_rename": 1,
  "creation": "2024-08-24 13:30:16.053251",
  "doctype": "DocType",
+ "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
   "frappe_client"
@@ -19,7 +20,7 @@
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2024-08-24 13:32:10.487625",
+ "modified": "2024-08-24 15:39:08.398337",
  "modified_by": "Administrator",
  "module": "Thefrappepreneur",
  "name": "PCM Clients Table",

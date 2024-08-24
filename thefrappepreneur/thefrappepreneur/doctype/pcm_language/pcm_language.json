@@ -21,13 +21,14 @@
    "fieldname": "rating",
    "fieldtype": "Rating",
    "in_list_view": 1,
-   "label": "Rating"
+   "label": "Rating",
+   "permlevel": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2024-08-24 12:40:39.575943",
+ "modified": "2024-08-24 20:49:47.174378",
  "modified_by": "Administrator",
  "module": "Thefrappepreneur",
  "name": "PCM Language",

@@ -15,7 +15,7 @@
    "fieldname": "location",
    "fieldtype": "Link",
    "label": "Location",
-   "options": "Location",
+   "options": "PCM Location",
    "unique": 1
   },
   {
@@ -28,7 +28,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-08-24 14:19:28.259373",
+ "modified": "2024-08-24 19:12:21.307392",
  "modified_by": "Administrator",
  "module": "Thefrappepreneur",
  "name": "Frappe Client",
