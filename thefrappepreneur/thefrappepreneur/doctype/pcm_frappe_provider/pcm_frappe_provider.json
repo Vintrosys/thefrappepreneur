@@ -3,6 +3,7 @@
  "allow_rename": 1,
  "creation": "2024-08-24 13:32:48.859657",
  "doctype": "DocType",
+ "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
   "frappe_provider"
@@ -19,7 +20,7 @@
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2024-08-24 13:39:26.587794",
+ "modified": "2024-08-24 15:39:32.228437",
  "modified_by": "Administrator",
  "module": "Thefrappepreneur",
  "name": "PCM Frappe Provider",

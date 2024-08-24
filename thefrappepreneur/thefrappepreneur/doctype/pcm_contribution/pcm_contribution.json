@@ -17,7 +17,8 @@
    "fieldname": "rating",
    "fieldtype": "Rating",
    "in_list_view": 1,
-   "label": "Rating"
+   "label": "Rating",
+   "permlevel": 1
   },
   {
    "fieldname": "source",
@@ -37,7 +38,7 @@
    "fieldname": "reference_url",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Reference URL",
+   "label": "URL",
    "options": "URL"
   },
   {
@@ -50,7 +51,7 @@
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2024-08-24 14:17:56.880033",
+ "modified": "2024-08-24 20:50:13.590858",
  "modified_by": "Administrator",
  "module": "Thefrappepreneur",
  "name": "PCM Contribution",
