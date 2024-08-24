@@ -1,0 +1,46 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:erpnext_module",
+ "creation": "2024-08-24 13:09:47.188250",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "erpnext_module"
+ ],
+ "fields": [
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "erpnext_module",
+   "fieldtype": "Data",
+   "label": "ERPNext Module",
+   "unique": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-08-24 13:10:36.743360",
+ "modified_by": "Administrator",
+ "module": "Thefrappepreneur",
+ "name": "ERPNext Module",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

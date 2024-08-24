@@ -1,0 +1,32 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-08-24 13:32:48.859657",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "frappe_provider"
+ ],
+ "fields": [
+  {
+   "fieldname": "frappe_provider",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Frappe Provider",
+   "options": "Frappe Provider"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-08-24 13:39:26.587794",
+ "modified_by": "Administrator",
+ "module": "Thefrappepreneur",
+ "name": "PCM Frappe Provider",
+ "nsm_parent_field": "parent_pcm_clients_table",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

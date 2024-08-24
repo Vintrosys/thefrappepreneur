@@ -1,0 +1,48 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-08-24 13:41:11.255835",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "member_id",
+  "testimonials",
+  "rating"
+ ],
+ "fields": [
+  {
+   "fieldname": "member_id",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Member ID",
+   "options": "Profile Listing"
+  },
+  {
+   "fieldname": "testimonials",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Testimonials",
+   "options": "Frappe Provider"
+  },
+  {
+   "fieldname": "rating",
+   "fieldtype": "Rating",
+   "in_list_view": 1,
+   "label": "Rating"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-08-24 14:22:13.096848",
+ "modified_by": "Administrator",
+ "module": "Thefrappepreneur",
+ "name": "PCM Testimonials",
+ "nsm_parent_field": "parent_pcm_clients_table",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,62 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-08-24 12:59:27.588077",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "source",
+  "contribution_type",
+  "reference_url",
+  "rating",
+  "reference"
+ ],
+ "fields": [
+  {
+   "fieldname": "rating",
+   "fieldtype": "Rating",
+   "in_list_view": 1,
+   "label": "Rating"
+  },
+  {
+   "fieldname": "source",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Source",
+   "options": "Source"
+  },
+  {
+   "fieldname": "contribution_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Contribution Type",
+   "options": "Contribution Type"
+  },
+  {
+   "fieldname": "reference_url",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Reference URL",
+   "options": "URL"
+  },
+  {
+   "fieldname": "reference",
+   "fieldtype": "Text Editor",
+   "in_list_view": 1,
+   "label": "Reference"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-08-24 14:17:56.880033",
+ "modified_by": "Administrator",
+ "module": "Thefrappepreneur",
+ "name": "PCM Contribution",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
