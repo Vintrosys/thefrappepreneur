@@ -66,6 +66,7 @@
   {
    "fieldname": "profile_stage",
    "fieldtype": "Select",
+   "in_standard_filter": 1,
    "label": "Profile Stage",
    "options": "Registered\nRated\nApproved\nListed",
    "permlevel": 1
@@ -75,6 +76,7 @@
    "depends_on": "eval: doc.profile_stage == \"Approved\"",
    "fieldname": "profile_status",
    "fieldtype": "Select",
+   "in_standard_filter": 1,
    "label": "Profile Status",
    "options": "Open\nActive\nIdle",
    "permlevel": 1,
@@ -122,6 +124,7 @@
   {
    "fieldname": "member_type",
    "fieldtype": "Link",
+   "in_standard_filter": 1,
    "label": "Member Type",
    "options": "Member Type",
    "reqd": 1
@@ -228,6 +231,7 @@
    "fieldname": "member_name",
    "fieldtype": "Data",
    "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Member Name",
    "reqd": 1
   },
@@ -262,6 +266,7 @@
    "fieldname": "current_location",
    "fieldtype": "Link",
    "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Current Location",
    "options": "PCM Location",
    "reqd": 1
@@ -347,6 +352,7 @@
   {
    "fieldname": "profile_rating",
    "fieldtype": "Rating",
+   "in_standard_filter": 1,
    "label": "Profile Rating",
    "permlevel": 1
   },
@@ -363,7 +369,7 @@
  "index_web_pages_for_search": 1,
  "is_tree": 1,
  "links": [],
- "modified": "2024-08-24 20:47:57.993260",
+ "modified": "2024-08-24 20:59:33.498842",
  "modified_by": "Administrator",
  "module": "Thefrappepreneur",
  "name": "Profile Listing",
