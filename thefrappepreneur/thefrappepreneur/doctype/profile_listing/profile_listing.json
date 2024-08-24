@@ -369,7 +369,7 @@
  "index_web_pages_for_search": 1,
  "is_tree": 1,
  "links": [],
- "modified": "2024-08-24 20:59:33.498842",
+ "modified": "2024-08-24 21:07:03.755586",
  "modified_by": "Administrator",
  "module": "Thefrappepreneur",
  "name": "Profile Listing",
@@ -404,6 +404,12 @@
   {
    "permlevel": 1,
    "read": 1,
+   "role": "Super Admin",
+   "write": 1
+  },
+  {
+   "permlevel": 1,
+   "read": 1,
    "role": "Community Member"
   },
   {
@@ -422,5 +428,6 @@
  "search_fields": "member_name, member_type",
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "title_field": "profile_rating"
 }
