@@ -68,7 +68,7 @@ app_license = "mit"
 # ------------
 
 # before_install = "thefrappepreneur.install.before_install"
-# after_install = "thefrappepreneur.install.after_install"
+after_install = "thefrappepreneur.setup.after_install"
 
 # Uninstallation
 # ------------

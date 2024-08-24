@@ -1,0 +1,302 @@
+{
+ "actions": [],
+ "autoname": "format:CM-{YY}-{#####}",
+ "creation": "2024-08-24 11:37:09.901393",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "basic_information_section",
+  "column_break_zjdy",
+  "member_name",
+  "regional_area",
+  "mobile_number",
+  "email_id",
+  "member_type",
+  "column_break_igua",
+  "final_rating",
+  "is_frappelancer",
+  "profile_stage",
+  "user_id",
+  "profile_status",
+  "organization_name",
+  "profile_image",
+  "section_break_jzol",
+  "bio",
+  "tab_2_tab",
+  "language",
+  "social_profiles_tab",
+  "pcm_social_profiles",
+  "area_of_interest_tab",
+  "pcm_area_of_interest",
+  "skills_tab",
+  "pcm_skills",
+  "contribution_tab",
+  "pcm_contribution",
+  "info_tab",
+  "industry",
+  "erpnext_module",
+  "frappe_apps",
+  "section_break_jqte",
+  "clients",
+  "column_break_hoit",
+  "frappe_provider",
+  "testimonials_tab",
+  "pcm_testimonials",
+  "testimonials_view"
+ ],
+ "fields": [
+  {
+   "default": "0",
+   "fieldname": "is_frappelancer",
+   "fieldtype": "Check",
+   "label": "Is Frappelancer"
+  },
+  {
+   "fieldname": "final_rating",
+   "fieldtype": "Rating",
+   "label": "Final Rating"
+  },
+  {
+   "fieldname": "profile_stage",
+   "fieldtype": "Select",
+   "label": "Profile Stage",
+   "options": "Registered\nRated\nApproved\nListed"
+  },
+  {
+   "default": "Open",
+   "depends_on": "eval: doc.profile_stage == \"Approved\"",
+   "fieldname": "profile_status",
+   "fieldtype": "Select",
+   "label": "Profile Status",
+   "options": "Open\nActive\nIdle",
+   "reqd": 1
+  },
+  {
+   "fieldname": "profile_image",
+   "fieldtype": "Attach Image",
+   "hidden": 1,
+   "label": "Profile Image"
+  },
+  {
+   "fieldname": "basic_information_section",
+   "fieldtype": "Section Break",
+   "label": "Basic Information"
+  },
+  {
+   "fieldname": "column_break_zjdy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_igua",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "tab_2_tab",
+   "fieldtype": "Tab Break",
+   "label": "Languages"
+  },
+  {
+   "fieldname": "regional_area",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Regional Area",
+   "options": "Territory",
+   "reqd": 1
+  },
+  {
+   "fieldname": "mobile_number",
+   "fieldtype": "Phone",
+   "in_list_view": 1,
+   "label": "Mobile Number",
+   "reqd": 1
+  },
+  {
+   "fieldname": "email_id",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Email ID",
+   "options": "Email",
+   "reqd": 1
+  },
+  {
+   "fieldname": "member_type",
+   "fieldtype": "Link",
+   "label": "Member Type",
+   "options": "Member Type",
+   "reqd": 1
+  },
+  {
+   "allow_bulk_edit": 1,
+   "fieldname": "language",
+   "fieldtype": "Table",
+   "label": "Language",
+   "options": "PCM Language"
+  },
+  {
+   "fieldname": "social_profiles_tab",
+   "fieldtype": "Tab Break",
+   "label": "Social Profiles"
+  },
+  {
+   "allow_bulk_edit": 1,
+   "fieldname": "pcm_social_profiles",
+   "fieldtype": "Table",
+   "label": "Social Profiles",
+   "options": "PCM Social Profiles"
+  },
+  {
+   "fieldname": "section_break_jzol",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "bio",
+   "fieldtype": "Small Text",
+   "label": "Bio"
+  },
+  {
+   "fieldname": "area_of_interest_tab",
+   "fieldtype": "Tab Break",
+   "label": "Area of Interest"
+  },
+  {
+   "fieldname": "pcm_area_of_interest",
+   "fieldtype": "Table",
+   "label": "Area of Interest",
+   "options": "PCM Area of Interest"
+  },
+  {
+   "fieldname": "skills_tab",
+   "fieldtype": "Tab Break",
+   "label": "Skills"
+  },
+  {
+   "allow_bulk_edit": 1,
+   "fieldname": "pcm_skills",
+   "fieldtype": "Table",
+   "label": "Skills",
+   "options": "PCM Skills"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "contribution_tab",
+   "fieldtype": "Tab Break",
+   "label": "Contribution"
+  },
+  {
+   "allow_bulk_edit": 1,
+   "fieldname": "pcm_contribution",
+   "fieldtype": "Table",
+   "label": "Contribution",
+   "options": "PCM Contribution"
+  },
+  {
+   "fieldname": "info_tab",
+   "fieldtype": "Tab Break",
+   "label": "Basic Info"
+  },
+  {
+   "allow_bulk_edit": 1,
+   "fieldname": "industry",
+   "fieldtype": "Table",
+   "label": "Industry",
+   "options": "PCM Industry"
+  },
+  {
+   "allow_bulk_edit": 1,
+   "fieldname": "erpnext_module",
+   "fieldtype": "Table",
+   "label": "ERPNext Module",
+   "options": "PCM ERPNext Module"
+  },
+  {
+   "allow_bulk_edit": 1,
+   "fieldname": "frappe_apps",
+   "fieldtype": "Table",
+   "label": "Frappe Apps",
+   "options": "PCM Frappe Apps"
+  },
+  {
+   "fieldname": "clients",
+   "fieldtype": "Table MultiSelect",
+   "label": "Clients",
+   "options": "PCM Clients Table"
+  },
+  {
+   "fieldname": "frappe_provider",
+   "fieldtype": "Table MultiSelect",
+   "label": "Frappe Provider",
+   "options": "PCM Frappe Provider"
+  },
+  {
+   "fieldname": "section_break_jqte",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_hoit",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "testimonials_tab",
+   "fieldtype": "Tab Break",
+   "label": "Testimonials"
+  },
+  {
+   "allow_bulk_edit": 1,
+   "fieldname": "pcm_testimonials",
+   "fieldtype": "Table",
+   "label": "Testimonials",
+   "options": "PCM Testimonials"
+  },
+  {
+   "fieldname": "testimonials_view",
+   "fieldtype": "HTML",
+   "label": "Testimonials View"
+  },
+  {
+   "fieldname": "member_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Member Name",
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval: doc.profile_stage == \"Approved\"",
+   "fieldname": "user_id",
+   "fieldtype": "Link",
+   "label": "User ID ",
+   "options": "User"
+  },
+  {
+   "depends_on": "eval: doc.member_type == \"Client\" || doc.member_type == \"Professional\" || doc.member_type == \"Providers\"",
+   "fieldname": "organization_name",
+   "fieldtype": "Data",
+   "label": "Organization Name"
+  }
+ ],
+ "image_field": "profile_image",
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-08-24 14:17:15.406122",
+ "modified_by": "Administrator",
+ "module": "Thefrappepreneur",
+ "name": "Profile Listing",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
