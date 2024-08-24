@@ -311,50 +311,58 @@
    "fieldname": "language_rating",
    "fieldtype": "Rating",
    "label": "Language Rating",
-   "permlevel": 1
+   "permlevel": 1,
+   "read_only": 1
   },
   {
    "fieldname": "social_profile_rating",
    "fieldtype": "Rating",
    "label": "Social Profile Rating",
-   "permlevel": 1
+   "permlevel": 1,
+   "read_only": 1
   },
   {
    "fieldname": "skill_rating",
    "fieldtype": "Rating",
    "label": "Skill Rating",
-   "permlevel": 1
+   "permlevel": 1,
+   "read_only": 1
   },
   {
    "fieldname": "contribution_rating",
    "fieldtype": "Rating",
    "label": "Contribution Rating",
-   "permlevel": 1
+   "permlevel": 1,
+   "read_only": 1
   },
   {
    "fieldname": "industry_rating",
    "fieldtype": "Rating",
    "label": "Industry Rating",
-   "permlevel": 1
+   "permlevel": 1,
+   "read_only": 1
   },
   {
    "fieldname": "erpnext_module_rating",
    "fieldtype": "Rating",
    "label": "ERPNext Module Rating",
-   "permlevel": 1
+   "permlevel": 1,
+   "read_only": 1
   },
   {
    "fieldname": "frappe_apps_rating",
    "fieldtype": "Rating",
    "label": "Frappe Apps Rating",
-   "permlevel": 1
+   "permlevel": 1,
+   "read_only": 1
   },
   {
    "fieldname": "profile_rating",
    "fieldtype": "Rating",
    "in_standard_filter": 1,
    "label": "Profile Rating",
-   "permlevel": 1
+   "permlevel": 1,
+   "read_only": 1
   },
   {
    "fieldname": "section_break_lpyt",
@@ -369,7 +377,7 @@
  "index_web_pages_for_search": 1,
  "is_tree": 1,
  "links": [],
- "modified": "2024-08-24 21:07:03.755586",
+ "modified": "2024-08-24 21:14:13.004129",
  "modified_by": "Administrator",
  "module": "Thefrappepreneur",
  "name": "Profile Listing",
