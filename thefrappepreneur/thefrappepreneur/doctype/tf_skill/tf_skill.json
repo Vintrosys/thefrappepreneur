@@ -1,0 +1,48 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-08-24 12:54:23.380438",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "skill",
+  "skill_type",
+  "rating"
+ ],
+ "fields": [
+  {
+   "fieldname": "rating",
+   "fieldtype": "Rating",
+   "in_list_view": 1,
+   "label": "Rating",
+   "permlevel": 1
+  },
+  {
+   "fieldname": "skill_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Skill Type",
+   "options": "TF Skill Type"
+  },
+  {
+   "fieldname": "skill",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Skill",
+   "options": "TF Skillset"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-08-25 16:12:49.721787",
+ "modified_by": "Administrator",
+ "module": "Thefrappepreneur",
+ "name": "TF Skill",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,442 @@
+{
+ "actions": [],
+ "autoname": "format:CM-{YY}-{#####}",
+ "creation": "2024-08-24 11:37:09.901393",
+ "default_view": "Image",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "basic_information_section",
+  "column_break_zjdy",
+  "member_name",
+  "member_type",
+  "organization_name",
+  "current_location",
+  "mobile_number",
+  "email_id",
+  "column_break_igua",
+  "profile_rating",
+  "profile_stage",
+  "profile_status",
+  "parent_profile_listing",
+  "is_frappelancer",
+  "frappelancer_section",
+  "available_hrs",
+  "min_hrly_rate",
+  "max_hrly_rate",
+  "column_break_phxa",
+  "bulk_package_hrs",
+  "bulk_package_cost",
+  "other_details_section",
+  "user_id",
+  "profile_image",
+  "about_tab",
+  "description",
+  "tab_2_tab",
+  "language",
+  "social_profiles_tab",
+  "pcm_social_profiles",
+  "area_of_interest_tab",
+  "pcm_area_of_interest",
+  "skills_tab",
+  "pcm_skills",
+  "skill_rating",
+  "contribution_tab",
+  "pcm_contribution",
+  "contribution_rating",
+  "info_tab",
+  "industry",
+  "industry_rating",
+  "erpnext_module",
+  "erpnext_module_rating",
+  "frappe_apps",
+  "frappe_apps_rating",
+  "section_break_jqte",
+  "pcm_clients",
+  "column_break_hoit",
+  "pcm_frappe_provider"
+ ],
+ "fields": [
+  {
+   "default": "0",
+   "fieldname": "is_frappelancer",
+   "fieldtype": "Check",
+   "label": "Is Frappelancer"
+  },
+  {
+   "default": "Registered",
+   "fieldname": "profile_stage",
+   "fieldtype": "Select",
+   "in_standard_filter": 1,
+   "label": "Profile Stage",
+   "options": "Registered\nRated\nApproved\nListed",
+   "permlevel": 1,
+   "reqd": 1
+  },
+  {
+   "default": "Open",
+   "depends_on": "eval: doc.profile_stage == \"Approved\"",
+   "fieldname": "profile_status",
+   "fieldtype": "Select",
+   "in_standard_filter": 1,
+   "label": "Profile Status",
+   "options": "Open\nActive\nIdle",
+   "permlevel": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "profile_image",
+   "fieldtype": "Attach Image",
+   "hidden": 1,
+   "label": "Profile Image"
+  },
+  {
+   "fieldname": "basic_information_section",
+   "fieldtype": "Section Break",
+   "label": "Basic Information"
+  },
+  {
+   "fieldname": "column_break_zjdy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_igua",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "tab_2_tab",
+   "fieldtype": "Tab Break",
+   "label": "Languages"
+  },
+  {
+   "fieldname": "mobile_number",
+   "fieldtype": "Phone",
+   "in_list_view": 1,
+   "label": "Mobile Number",
+   "reqd": 1
+  },
+  {
+   "fieldname": "email_id",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Email ID",
+   "options": "Email",
+   "reqd": 1
+  },
+  {
+   "fieldname": "member_type",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Member Type",
+   "options": "TF Member Type",
+   "reqd": 1
+  },
+  {
+   "allow_bulk_edit": 1,
+   "fieldname": "language",
+   "fieldtype": "Table",
+   "label": "Language",
+   "options": "TF Language Detail"
+  },
+  {
+   "fieldname": "social_profiles_tab",
+   "fieldtype": "Tab Break",
+   "label": "Social Profiles"
+  },
+  {
+   "allow_bulk_edit": 1,
+   "fieldname": "pcm_social_profiles",
+   "fieldtype": "Table",
+   "label": "Social Profiles",
+   "options": "TF Social Profile Detail"
+  },
+  {
+   "fieldname": "area_of_interest_tab",
+   "fieldtype": "Tab Break",
+   "label": "Area of Interest"
+  },
+  {
+   "fieldname": "pcm_area_of_interest",
+   "fieldtype": "Table",
+   "label": "Area of Interest",
+   "options": "TF Area of Interest Detail"
+  },
+  {
+   "fieldname": "skills_tab",
+   "fieldtype": "Tab Break",
+   "label": "Skills"
+  },
+  {
+   "allow_bulk_edit": 1,
+   "fieldname": "pcm_skills",
+   "fieldtype": "Table",
+   "label": "Skills",
+   "options": "TF Skill"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "contribution_tab",
+   "fieldtype": "Tab Break",
+   "label": "Contribution"
+  },
+  {
+   "allow_bulk_edit": 1,
+   "fieldname": "pcm_contribution",
+   "fieldtype": "Table",
+   "label": "Contribution",
+   "options": "TF Contribution"
+  },
+  {
+   "fieldname": "info_tab",
+   "fieldtype": "Tab Break",
+   "label": "More Information"
+  },
+  {
+   "allow_bulk_edit": 1,
+   "fieldname": "industry",
+   "fieldtype": "Table",
+   "label": "Industry",
+   "options": "TF Industry Detail"
+  },
+  {
+   "allow_bulk_edit": 1,
+   "fieldname": "erpnext_module",
+   "fieldtype": "Table",
+   "label": "ERPNext Module",
+   "options": "TF ERP Module Detail"
+  },
+  {
+   "allow_bulk_edit": 1,
+   "fieldname": "frappe_apps",
+   "fieldtype": "Table",
+   "label": "Frappe Apps",
+   "options": "TF Frappe App Detail"
+  },
+  {
+   "fieldname": "section_break_jqte",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_hoit",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "member_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Member Name",
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval: doc.profile_stage == \"Approved\"",
+   "fieldname": "user_id",
+   "fieldtype": "Link",
+   "label": "User ID ",
+   "options": "User"
+  },
+  {
+   "depends_on": "eval: doc.member_type == \"Client\" || doc.member_type == \"Professional\" || doc.member_type == \"Providers\"",
+   "fieldname": "organization_name",
+   "fieldtype": "Data",
+   "label": "Organization Name"
+  },
+  {
+   "allow_bulk_edit": 1,
+   "fieldname": "pcm_clients",
+   "fieldtype": "Table",
+   "label": "Clients",
+   "options": "TF Client Detail"
+  },
+  {
+   "allow_bulk_edit": 1,
+   "fieldname": "pcm_frappe_provider",
+   "fieldtype": "Table",
+   "label": "Frappe Provider",
+   "options": "TF Frappe Provider Detail"
+  },
+  {
+   "fieldname": "current_location",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Current Location",
+   "options": "TF Location",
+   "reqd": 1
+  },
+  {
+   "fieldname": "parent_profile_listing",
+   "fieldtype": "Link",
+   "ignore_user_permissions": 1,
+   "label": "Referred By",
+   "options": "TF Member Profile"
+  },
+  {
+   "fieldname": "skill_rating",
+   "fieldtype": "Rating",
+   "label": "Skill Rating",
+   "permlevel": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "contribution_rating",
+   "fieldtype": "Rating",
+   "label": "Contribution Rating",
+   "permlevel": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "industry_rating",
+   "fieldtype": "Rating",
+   "label": "Industry Rating",
+   "permlevel": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "erpnext_module_rating",
+   "fieldtype": "Rating",
+   "label": "ERPNext Module Rating",
+   "permlevel": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "frappe_apps_rating",
+   "fieldtype": "Rating",
+   "label": "Frappe Apps Rating",
+   "permlevel": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "profile_rating",
+   "fieldtype": "Rating",
+   "in_standard_filter": 1,
+   "label": "Profile Rating",
+   "permlevel": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "about_tab",
+   "fieldtype": "Tab Break",
+   "label": "About"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description",
+   "reqd": 1
+  },
+  {
+   "fieldname": "other_details_section",
+   "fieldtype": "Section Break",
+   "hidden": 1,
+   "label": "Other Details"
+  },
+  {
+   "depends_on": "eval: doc.is_frappelancer",
+   "fieldname": "frappelancer_section",
+   "fieldtype": "Section Break",
+   "label": "Frappelancer",
+   "mandatory_depends_on": "eval: doc.is_frappelancer"
+  },
+  {
+   "description": "Per Day",
+   "fieldname": "available_hrs",
+   "fieldtype": "Float",
+   "label": "Available Hrs",
+   "mandatory_depends_on": "eval: doc.is_frappelancer"
+  },
+  {
+   "description": "Per Hour",
+   "fieldname": "min_hrly_rate",
+   "fieldtype": "Currency",
+   "label": "Min Rate",
+   "mandatory_depends_on": "eval: doc.is_frappelancer"
+  },
+  {
+   "description": "Per Hour",
+   "fieldname": "max_hrly_rate",
+   "fieldtype": "Currency",
+   "label": "Max Rate",
+   "mandatory_depends_on": "eval: doc.is_frappelancer"
+  },
+  {
+   "fieldname": "bulk_package_hrs",
+   "fieldtype": "Float",
+   "label": "Bulk Package Hrs"
+  },
+  {
+   "fieldname": "column_break_phxa",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "bulk_package_cost",
+   "fieldtype": "Currency",
+   "label": "Bulk Package Cost"
+  }
+ ],
+ "image_field": "profile_image",
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-08-25 16:26:45.086849",
+ "modified_by": "Administrator",
+ "module": "Thefrappepreneur",
+ "name": "TF Member Profile",
+ "naming_rule": "Expression",
+ "nsm_parent_field": "parent_profile_listing",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Super Admin",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "permlevel": 1,
+   "read": 1,
+   "role": "Super Admin",
+   "write": 1
+  },
+  {
+   "permlevel": 1,
+   "read": 1,
+   "role": "Community Member"
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Community Member",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "search_fields": "member_name, member_type",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "member_name"
+}

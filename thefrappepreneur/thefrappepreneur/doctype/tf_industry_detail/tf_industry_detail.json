@@ -1,0 +1,40 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-08-24 13:11:20.469633",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "industry",
+  "rating"
+ ],
+ "fields": [
+  {
+   "fieldname": "rating",
+   "fieldtype": "Rating",
+   "in_list_view": 1,
+   "label": "Rating",
+   "permlevel": 1
+  },
+  {
+   "fieldname": "industry",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Industry",
+   "options": "TF Industry"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-08-25 16:14:40.241234",
+ "modified_by": "Administrator",
+ "module": "Thefrappepreneur",
+ "name": "TF Industry Detail",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

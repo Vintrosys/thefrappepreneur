@@ -1,0 +1,106 @@
+{
+ "actions": [],
+ "autoname": "format:TM-{#####}",
+ "creation": "2024-08-24 13:41:11.255835",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "member_id",
+  "testimonial_type",
+  "route",
+  "column_break_bris",
+  "video",
+  "story",
+  "amended_from",
+  "feedback_section",
+  "feedback"
+ ],
+ "fields": [
+  {
+   "fieldname": "member_id",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Member ID",
+   "options": "TF Member Profile",
+   "reqd": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "TF Testimonial",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "video",
+   "fieldtype": "Data",
+   "label": "Video",
+   "options": "URL"
+  },
+  {
+   "fieldname": "story",
+   "fieldtype": "Data",
+   "label": "Story",
+   "options": "URL"
+  },
+  {
+   "fieldname": "testimonial_type",
+   "fieldtype": "Select",
+   "label": "Testimonial Type",
+   "options": "Quick Words\nVideo\nStory",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_bris",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "feedback_section",
+   "fieldtype": "Section Break",
+   "label": "Feedback"
+  },
+  {
+   "fieldname": "feedback",
+   "fieldtype": "Small Text",
+   "label": "Feedback"
+  },
+  {
+   "fieldname": "route",
+   "fieldtype": "Data",
+   "label": "Route",
+   "read_only": 1
+  }
+ ],
+ "has_web_view": 1,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-08-25 16:09:59.223690",
+ "modified_by": "Administrator",
+ "module": "Thefrappepreneur",
+ "name": "TF Testimonial",
+ "naming_rule": "Expression",
+ "nsm_parent_field": "parent_pcm_clients_table",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "route": "member-testimonials",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
