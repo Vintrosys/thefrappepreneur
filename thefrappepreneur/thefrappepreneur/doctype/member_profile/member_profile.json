@@ -23,8 +23,10 @@
   "profile_status",
   "organization_name",
   "profile_image",
-  "section_break_jzol",
+  "column_break_hepu",
   "bio",
+  "about_tab",
+  "description",
   "tab_2_tab",
   "language",
   "language_rating",
@@ -54,7 +56,13 @@
   "lft",
   "rgt",
   "old_parent",
-  "column_break_jahv"
+  "column_break_jahv",
+  "reviews_tab",
+  "reviews",
+  "videos_tab",
+  "videos",
+  "stories_tab",
+  "stories"
  ],
  "fields": [
   {
@@ -147,10 +155,6 @@
    "fieldtype": "Table",
    "label": "Social Profiles",
    "options": "PCM Social Profiles"
-  },
-  {
-   "fieldname": "section_break_jzol",
-   "fieldtype": "Section Break"
   },
   {
    "fieldname": "bio",
@@ -297,14 +301,14 @@
    "fieldname": "old_parent",
    "fieldtype": "Link",
    "label": "Old Parent",
-   "options": "Profile Listing"
+   "options": "Member Profile"
   },
   {
    "fieldname": "parent_profile_listing",
    "fieldtype": "Link",
    "ignore_user_permissions": 1,
    "label": "Referred By",
-   "options": "Profile Listing"
+   "options": "Member Profile"
   },
   {
    "fieldname": "language_rating",
@@ -370,13 +374,58 @@
   {
    "fieldname": "column_break_jahv",
    "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "reviews_tab",
+   "fieldtype": "Tab Break",
+   "label": "Reviews"
+  },
+  {
+   "fieldname": "reviews",
+   "fieldtype": "HTML",
+   "label": "Reviews"
+  },
+  {
+   "fieldname": "videos_tab",
+   "fieldtype": "Tab Break",
+   "label": "Videos"
+  },
+  {
+   "fieldname": "videos",
+   "fieldtype": "HTML",
+   "label": "Videos"
+  },
+  {
+   "fieldname": "stories_tab",
+   "fieldtype": "Tab Break",
+   "label": "Stories"
+  },
+  {
+   "fieldname": "stories",
+   "fieldtype": "HTML",
+   "label": "Stories"
+  },
+  {
+   "fieldname": "about_tab",
+   "fieldtype": "Tab Break",
+   "label": "About"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_hepu",
+   "fieldtype": "Column Break"
   }
  ],
  "image_field": "profile_image",
  "index_web_pages_for_search": 1,
  "is_tree": 1,
  "links": [],
- "modified": "2024-08-25 11:18:26.052384",
+ "modified": "2024-08-25 12:59:17.719233",
  "modified_by": "Administrator",
  "module": "Thefrappepreneur",
  "name": "Member Profile",
