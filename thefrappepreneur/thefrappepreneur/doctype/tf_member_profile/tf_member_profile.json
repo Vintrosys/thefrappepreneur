@@ -51,12 +51,12 @@
   "erp_module_rating",
   "frappe_apps",
   "frappe_apps_rating",
-  "3rd_party_integration",
-  "integration_rating",
   "section_break_jqte",
   "pcm_clients",
   "column_break_hoit",
-  "pcm_frappe_provider"
+  "pcm_frappe_provider",
+  "testimonials_tab",
+  "all_testimonials"
  ],
  "fields": [
   {
@@ -362,12 +362,6 @@
    "label": "Bulk Package Cost"
   },
   {
-   "fieldname": "3rd_party_integration",
-   "fieldtype": "Table",
-   "label": "3rd Party Integration",
-   "options": "TF Integration Detail"
-  },
-  {
    "allow_bulk_edit": 1,
    "fieldname": "erp_module",
    "fieldtype": "Table",
@@ -382,16 +376,20 @@
    "read_only": 1
   },
   {
-   "fieldname": "integration_rating",
-   "fieldtype": "Rating",
-   "label": "Integration Rating",
-   "read_only": 1
+   "fieldname": "testimonials_tab",
+   "fieldtype": "Tab Break",
+   "label": "Testimonials"
+  },
+  {
+   "fieldname": "all_testimonials",
+   "fieldtype": "HTML",
+   "label": "All Testimonials"
   }
  ],
  "image_field": "profile_image",
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-08-25 16:57:03.057712",
+ "modified": "2024-08-25 19:29:44.518575",
  "modified_by": "Administrator",
  "module": "Thefrappepreneur",
  "name": "TF Member Profile",

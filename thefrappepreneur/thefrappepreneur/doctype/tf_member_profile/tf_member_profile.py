@@ -63,3 +63,30 @@ class TFMemberProfile(Document):
 		)
 		user.insert()
 		self.user_id = user.name
+
+@frappe.whitelist()
+def get_testimonials():
+	if frappe.has_permission("TF Testimonial", "read"):
+		tft_data = frappe.get_all(
+			"TF Testimonial",
+			fields=[
+				"name",
+				"feedback",
+				"video"
+			],
+			filters={
+				"docstatus": 1
+			},
+			order_by="creation",
+		)
+
+		# for row in tft_data:
+		# 	row.video = f"""
+		# 			<a class="ellipsis">{row.name}</a>
+		# 		"""
+
+		# 	row.operation_link = f"""
+		# 			<a class="ellipsis" data-doctype="Operation" data-name="{row.operation}" href="/app/operation/{row.operation}" title="" data-original-title="{row.operation}">{row.operation}</a>
+		# 		"""
+
+		return tft_data

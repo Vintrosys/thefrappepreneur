@@ -1,0 +1,35 @@
+<style>
+	.job-card-link {
+		min-height: 60px;
+	}
+
+	.section-head-job-card {
+		margin-bottom: 0px;
+		padding-bottom: 0px;
+	}
+</style>
+
+<div>
+
+<div class="form-dashboard-section qrcode-fields col-sm-12 section-body" style="padding-left: 0px;padding-right: 25px;"></div>
+
+{% $.each(data, (idx, d) => { %}
+	<div class="row form-dashboard-section job-card-link form-links border-gray-200" data-name="{{d.name}}">
+		<div class="row form-section" style="width:100%;margin-top:10px">
+			<!-- <div class="form-column col-sm-2">
+				<div class="frappe-control bold"  title="{{__('Video')}}">
+					{{ d.video }}
+				</div>
+			</div> -->
+			<div class="form-column col-12 mb-3 scrollable-column">
+				<div class="frappe-control bold"  title="{{__('Video')}}">
+					{{ d.feedback }}
+				</div>
+			</div>
+			<!-- <div class="form-column col-sm-2 ellipsis">
+				<div class="frappe-control" title="{{__('Operation')}}">
+					{{ d.video }}
+				</div>
+		</div> -->
+{% }); %}
+</div>
