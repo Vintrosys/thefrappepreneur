@@ -12,9 +12,10 @@
  "fields": [
   {
    "fieldname": "integration",
-   "fieldtype": "Data",
+   "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Integration",
+   "options": "TF Integration",
    "reqd": 1
   },
   {
@@ -28,7 +29,7 @@
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2024-08-25 16:59:47.895131",
+ "modified": "2024-08-25 17:05:17.749640",
  "modified_by": "Administrator",
  "module": "Thefrappepreneur",
  "name": "TF Integration Detail",
