@@ -1,7 +1,7 @@
 // Copyright (c) 2024, vintrosys and contributors
 // For license information, please see license.txt
 
-frappe.ui.form.on("Profile Listing", {
+frappe.ui.form.on("Member Profile", {
     refresh(frm) {
         frm.add_custom_button(__("Referral Link"), function () {
             let site_url = window.location.origin;
