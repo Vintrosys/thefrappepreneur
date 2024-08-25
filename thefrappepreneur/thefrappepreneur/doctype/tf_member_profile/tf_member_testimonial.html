@@ -1,4 +1,4 @@
-<style>
+<!-- <style>
 	.job-card-link {
 		min-height: 60px;
 	}
@@ -7,29 +7,101 @@
 		margin-bottom: 0px;
 		padding-bottom: 0px;
 	}
-</style>
+</style> -->
 
-<div>
 
-<div class="form-dashboard-section qrcode-fields col-sm-12 section-body" style="padding-left: 0px;padding-right: 25px;"></div>
 
-{% $.each(data, (idx, d) => { %}
-	<div class="row form-dashboard-section job-card-link form-links border-gray-200" data-name="{{d.name}}">
+<!-- {% $.each(data, (idx, d) => { %}
+	<div class="row form-dashboard-section">
 		<div class="row form-section" style="width:100%;margin-top:10px">
-			<!-- <div class="form-column col-sm-2">
-				<div class="frappe-control bold"  title="{{__('Video')}}">
-					{{ d.video }}
-				</div>
-			</div> -->
 			<div class="form-column col-12 mb-3 scrollable-column">
 				<div class="frappe-control bold"  title="{{__('Video')}}">
 					{{ d.feedback }}
 				</div>
 			</div>
-			<!-- <div class="form-column col-sm-2 ellipsis">
-				<div class="frappe-control" title="{{__('Operation')}}">
-					{{ d.video }}
-				</div>
-		</div> -->
-{% }); %}
+{% }); %} -->
+
+
+<style>
+	/* Custom CSS for the big testimonial card */
+	.testimonial-card {
+		max-width: 800px; /* Adjust the width as needed */
+		margin: auto; /* Center the card horizontally */
+		margin-top: 50px;
+		padding: 30px;
+		border-radius: 15px;
+		box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+		background-color: #f8f9fa;
+	}
+	.testimonial-text {
+		font-size: 0.9rem;
+		font-style: italic;
+		line-height: 1.5;
+		margin-bottom: 20px;
+	}
+	.testimonial-author {
+		display: flex;
+		align-items: center;
+	}
+	.testimonial-author img {
+		border-radius: 50%;
+		width: 60px;
+		height: 60px;
+		margin-right: 15px;
+	}
+	.testimonial-author-name {
+		font-weight: bold;
+		font-size: 1rem;
+	}
+	.testimonial-author-title {
+		font-size: 0.9rem;
+		color: #6c757d;
+	}
+	.card {
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        .card:hover {
+            transform: scale(1.02);
+        }
+        .card-preview {
+            display: none; /* Hidden by default */
+            background-color: #f8f9fa;
+            padding: 15px;
+            margin-top: 10px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+</style>
+
+<div class="scrollable-container">
+	{% $.each(data, (idx, d) => { %}
+	<div class="testimonial-card">
+		<div class="testimonial-text">
+			{{ d.feedback}}
+		</div>
+		<div class="testimonial-author">
+			<img src="http://thefrappepreneur:8000/private/files/1723213861316.jpeg" alt="Author Image">
+			<div>
+				<div class="testimonial-author-name">Kaviya Periyasamy</div>
+				<div class="testimonial-author-title">CEO, Vintrosys</div>
+			</div>
+		</div>
+	</div>
+	{% }); %}
 </div>
+
+<!-- <div class="container mt-5">
+	<div class="card" id="clickable-card">
+		<div class="card-body">
+			<h5 class="card-title">Card Title</h5>
+			<p class="card-text">This is a summary of the content.</p>
+			<a href="https://frappe.io/testimonials">Click to see more.</a>
+		</div>
+
+		<div class="card-preview" id="card-preview">
+			<p>This is the additional content that was hidden before. It can contain more details, images, or other elements.</p>
+			<p>Use this space to provide more in-depth information.</p>
+		</div>
+	</div>
+</div> -->
