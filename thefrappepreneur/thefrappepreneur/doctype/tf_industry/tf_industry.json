@@ -40,14 +40,14 @@
    "fieldname": "old_parent",
    "fieldtype": "Link",
    "label": "Old Parent",
-   "options": "Industry"
+   "options": "TF Industry"
   },
   {
    "fieldname": "parent_industry",
    "fieldtype": "Link",
    "ignore_user_permissions": 1,
    "label": "Parent Industry",
-   "options": "Industry"
+   "options": "TF Industry"
   },
   {
    "allow_in_quick_entry": 1,
@@ -60,7 +60,7 @@
  "index_web_pages_for_search": 1,
  "is_tree": 1,
  "links": [],
- "modified": "2024-08-24 13:07:56.448915",
+ "modified": "2024-08-25 19:48:03.418787",
  "modified_by": "Administrator",
  "module": "Thefrappepreneur",
  "name": "TF Industry",
