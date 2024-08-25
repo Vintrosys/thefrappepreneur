@@ -5,5 +5,5 @@
 from frappe.tests.utils import FrappeTestCase
 
 
-class TestTFSource(FrappeTestCase):
+class TestTFSkill(FrappeTestCase):
 	pass

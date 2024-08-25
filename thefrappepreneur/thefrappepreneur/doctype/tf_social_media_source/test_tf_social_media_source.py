@@ -5,5 +5,5 @@
 from frappe.tests.utils import FrappeTestCase
 
 
-class TestTFSkillType(FrappeTestCase):
+class TestTFSocialMediaSource(FrappeTestCase):
 	pass

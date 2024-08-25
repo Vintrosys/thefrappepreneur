@@ -5,5 +5,5 @@
 from frappe.model.document import Document
 
 
-class TFContribution(Document):
+class TFSkillDetail(Document):
 	pass

@@ -14,9 +14,10 @@ class TFMemberProfile(Document):
 		self.skill_rating = self.cal_avg_rating("pcm_skills")
 		self.contribution_rating = self.cal_avg_rating("pcm_contribution")
 		self.industry_rating = self.cal_avg_rating("industry")
-		self.erpnext_module_rating = self.cal_avg_rating("erpnext_module")
+		self.erp_module_rating = self.cal_avg_rating("erp_module")
 		self.frappe_apps_rating = self.cal_avg_rating("frappe_apps")
-		self.profile_rating = (self.skill_rating + self.contribution_rating + self.industry_rating + self.erpnext_module_rating + self.frappe_apps_rating)/5
+		self.integration_rating = self.cal_avg_rating("3rd_party_integration")
+		self.profile_rating = (self.skill_rating + self.contribution_rating + self.industry_rating + self.erp_module_rating + self.frappe_apps_rating + self.integration_rating)/6
 	def cal_avg_rating(self, table):
 		r = 0
 		if self.get(table):

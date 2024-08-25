@@ -1,7 +1,7 @@
 // Copyright (c) 2024, vintrosys and contributors
 // For license information, please see license.txt
 
-// frappe.ui.form.on("TF Source", {
+// frappe.ui.form.on("TF Social Media Source", {
 // 	refresh(frm) {
 
 // 	},

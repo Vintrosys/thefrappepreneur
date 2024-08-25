@@ -18,28 +18,32 @@
    "fieldtype": "Rating",
    "in_list_view": 1,
    "label": "Rating",
-   "permlevel": 1
+   "permlevel": 1,
+   "read_only": 1
   },
   {
    "fieldname": "source",
    "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Source",
-   "options": "TF Source"
+   "options": "TF Contribution Source",
+   "reqd": 1
   },
   {
    "fieldname": "contribution_type",
    "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Contribution Type",
-   "options": "TF Contribution Type"
+   "options": "TF Contribution Type",
+   "reqd": 1
   },
   {
    "fieldname": "reference_url",
    "fieldtype": "Data",
    "in_list_view": 1,
    "label": "URL",
-   "options": "URL"
+   "options": "URL",
+   "reqd": 1
   },
   {
    "fieldname": "reference",
@@ -51,10 +55,10 @@
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2024-08-25 16:10:46.106052",
+ "modified": "2024-08-25 16:50:18.704991",
  "modified_by": "Administrator",
  "module": "Thefrappepreneur",
- "name": "TF Contribution",
+ "name": "TF Contribution Detail",
  "owner": "Administrator",
  "permissions": [],
  "sort_field": "modified",

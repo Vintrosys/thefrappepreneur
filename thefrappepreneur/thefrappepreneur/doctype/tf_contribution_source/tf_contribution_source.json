@@ -2,7 +2,7 @@
  "actions": [],
  "allow_rename": 1,
  "autoname": "field:source",
- "creation": "2024-08-24 12:42:52.694372",
+ "creation": "2024-08-25 16:48:40.680417",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
@@ -19,10 +19,10 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-08-24 12:43:31.037675",
+ "modified": "2024-08-25 16:48:40.680417",
  "modified_by": "Administrator",
  "module": "Thefrappepreneur",
- "name": "TF Source",
+ "name": "TF Contribution Source",
  "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [

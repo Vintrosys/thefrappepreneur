@@ -1,42 +1,32 @@
 {
  "actions": [],
  "allow_rename": 1,
- "creation": "2024-08-24 12:42:13.630351",
+ "creation": "2024-08-25 16:53:12.252589",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "source",
-  "source_id"
+  "integration"
  ],
  "fields": [
   {
-   "fieldname": "source",
-   "fieldtype": "Link",
-   "in_list_view": 1,
-   "label": "Source",
-   "options": "TF Social Media Source",
-   "reqd": 1
-  },
-  {
-   "fieldname": "source_id",
+   "fieldname": "integration",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Source ID",
-   "options": "URL",
+   "label": "Integration",
    "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2024-08-25 16:47:44.259571",
+ "modified": "2024-08-25 16:53:32.818476",
  "modified_by": "Administrator",
  "module": "Thefrappepreneur",
- "name": "TF Social Profile Detail",
+ "name": "TF Integration Detail",
  "owner": "Administrator",
  "permissions": [],
- "sort_field": "modified",
+ "sort_field": "creation",
  "sort_order": "DESC",
  "states": []
 }

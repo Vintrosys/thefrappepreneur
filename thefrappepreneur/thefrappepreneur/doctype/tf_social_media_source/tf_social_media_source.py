@@ -5,5 +5,5 @@
 from frappe.model.document import Document
 
 
-class TFSkillset(Document):
+class TFSocialMediaSource(Document):
 	pass
