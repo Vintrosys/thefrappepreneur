@@ -7,12 +7,12 @@ def after_install():
 def create_membertype():
     member_type = ["Client", "Providers", "Professional", "Student", "Freelancer"]
     for type in member_type:
-        if frappe.db.exists("Member Type", type):
+        if frappe.db.exists("TF Member Type", type):
             return
 
         frappe.get_doc(
             {
-                "doctype": "Member Type",
+                "doctype": "TF Member Type",
                 "member_type": type,
             }
         ).insert(ignore_permissions=True)
