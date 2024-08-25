@@ -304,8 +304,7 @@
    "fieldtype": "Link",
    "ignore_user_permissions": 1,
    "label": "Referred By",
-   "options": "Profile Listing",
-   "reqd": 1
+   "options": "Profile Listing"
   },
   {
    "fieldname": "language_rating",
@@ -377,7 +376,7 @@
  "index_web_pages_for_search": 1,
  "is_tree": 1,
  "links": [],
- "modified": "2024-08-24 21:14:13.004129",
+ "modified": "2024-08-25 11:18:26.052384",
  "modified_by": "Administrator",
  "module": "Thefrappepreneur",
  "name": "Profile Listing",
