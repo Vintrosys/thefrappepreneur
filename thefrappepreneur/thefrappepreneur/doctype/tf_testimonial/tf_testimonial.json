@@ -5,15 +5,22 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "member_id",
   "testimonial_type",
-  "route",
+  "member_id",
+  "rating",
   "column_break_bris",
-  "video",
-  "story",
+  "industry",
+  "frappe_app",
+  "erp_module",
+  "skill",
   "amended_from",
+  "more_info_section",
+  "route",
+  "testimonial_tab",
   "feedback_section",
-  "feedback"
+  "feedback",
+  "video",
+  "story"
  ],
  "fields": [
   {
@@ -38,12 +45,7 @@
    "fieldname": "video",
    "fieldtype": "Data",
    "label": "Video",
-   "options": "URL"
-  },
-  {
-   "fieldname": "story",
-   "fieldtype": "Data",
-   "label": "Story",
+   "mandatory_depends_on": "eval:doc.testimonial_type==\"Video\"",
    "options": "URL"
   },
   {
@@ -65,20 +67,72 @@
   {
    "fieldname": "feedback",
    "fieldtype": "Small Text",
-   "label": "Feedback"
+   "label": "Feedback",
+   "mandatory_depends_on": "eval:doc.testimonial_type==\"Quick Words\""
   },
   {
    "fieldname": "route",
    "fieldtype": "Data",
    "label": "Route",
    "read_only": 1
+  },
+  {
+   "fieldname": "rating",
+   "fieldtype": "Rating",
+   "label": "Rating"
+  },
+  {
+   "fieldname": "skill",
+   "fieldtype": "Link",
+   "label": "Skill",
+   "options": "TF Skill",
+   "reqd": 1
+  },
+  {
+   "fieldname": "industry",
+   "fieldtype": "Link",
+   "label": "Industry",
+   "options": "TF Industry",
+   "reqd": 1
+  },
+  {
+   "fieldname": "erp_module",
+   "fieldtype": "Link",
+   "label": "ERP Module",
+   "options": "TF ERP Module",
+   "reqd": 1
+  },
+  {
+   "fieldname": "frappe_app",
+   "fieldtype": "Link",
+   "label": "Frappe App",
+   "options": "TF Frappe App",
+   "reqd": 1
+  },
+  {
+   "fieldname": "testimonial_tab",
+   "fieldtype": "Tab Break",
+   "label": "Testimonial"
+  },
+  {
+   "fieldname": "more_info_section",
+   "fieldtype": "Section Break",
+   "hidden": 1,
+   "label": "More Info"
+  },
+  {
+   "fieldname": "story",
+   "fieldtype": "Data",
+   "label": "Story",
+   "mandatory_depends_on": "eval:doc.testimonial_type==\"Story\"",
+   "options": "URL"
   }
  ],
  "has_web_view": 1,
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-08-25 16:09:59.223690",
+ "modified": "2024-08-25 17:49:39.374824",
  "modified_by": "Administrator",
  "module": "Thefrappepreneur",
  "name": "TF Testimonial",

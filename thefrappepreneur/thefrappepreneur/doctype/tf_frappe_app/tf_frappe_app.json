@@ -7,11 +7,12 @@
  "engine": "InnoDB",
  "field_order": [
   "frappe_app",
+  "is_3rd_party_integration",
   "lft",
   "rgt",
   "is_group",
   "old_parent",
-  "parent_skill_type"
+  "parent_tf_frappe_app"
  ],
  "fields": [
   {
@@ -40,14 +41,7 @@
    "fieldname": "old_parent",
    "fieldtype": "Link",
    "label": "Old Parent",
-   "options": "TF Skill Type"
-  },
-  {
-   "fieldname": "parent_skill_type",
-   "fieldtype": "Link",
-   "ignore_user_permissions": 1,
-   "label": "Parent Skill Type",
-   "options": "TF Skill Type"
+   "options": "TF Frappe App"
   },
   {
    "allow_in_quick_entry": 1,
@@ -55,17 +49,31 @@
    "fieldtype": "Data",
    "label": "Frappe App",
    "unique": 1
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "default": "0",
+   "fieldname": "is_3rd_party_integration",
+   "fieldtype": "Check",
+   "label": "Is 3rd Party Integration"
+  },
+  {
+   "fieldname": "parent_tf_frappe_app",
+   "fieldtype": "Link",
+   "ignore_user_permissions": 1,
+   "label": "Parent TF Frappe App",
+   "options": "TF Frappe App"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_tree": 1,
  "links": [],
- "modified": "2024-08-25 16:12:50.367864",
+ "modified": "2024-08-25 17:44:33.178691",
  "modified_by": "Administrator",
  "module": "Thefrappepreneur",
  "name": "TF Frappe App",
  "naming_rule": "By fieldname",
- "nsm_parent_field": "parent_skill_type",
+ "nsm_parent_field": "parent_tf_frappe_app",
  "owner": "Administrator",
  "permissions": [
   {
