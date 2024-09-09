@@ -3,6 +3,14 @@
 
 import frappe
 from frappe.website.website_generator import WebsiteGenerator
+# import textblob
+# from textblob import TextBlob
+
+# text = doc.feedback
+# blob = TextBlob(text)
+# blob.sentiment.polarity
+
+# -1 to 1
 
 
 class TFTestimonial(WebsiteGenerator):

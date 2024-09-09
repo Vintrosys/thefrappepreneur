@@ -1,6 +1,6 @@
 {
  "actions": [],
- "autoname": "format:TF-{MM}-{YY}-{#####}",
+ "autoname": "format:TF-{YY}-{#####}",
  "creation": "2024-08-24 11:37:09.901393",
  "default_view": "Image",
  "doctype": "DocType",
@@ -12,15 +12,16 @@
   "member_type",
   "organization_name",
   "current_location",
-  "mobile_number",
   "email_id",
   "column_break_igua",
   "profile_rating",
   "profile_stage",
   "profile_status",
-  "parent_profile_listing",
+  "referred_by",
+  "source",
   "is_frappelancer",
   "frappelancer_section",
+  "mobile_number",
   "available_hrs",
   "min_hrly_rate",
   "max_hrly_rate",
@@ -56,7 +57,11 @@
   "column_break_hoit",
   "pcm_frappe_provider",
   "testimonials_tab",
-  "all_testimonials"
+  "all_testimonials",
+  "videos_tab",
+  "all_videos",
+  "stories_tab",
+  "all_stories"
  ],
  "fields": [
   {
@@ -71,7 +76,7 @@
    "fieldtype": "Select",
    "in_standard_filter": 1,
    "label": "Profile Stage",
-   "options": "Registered\nRated\nApproved\nListed",
+   "options": "Registered\nApproved",
    "permlevel": 1,
    "reqd": 1
   },
@@ -114,8 +119,7 @@
    "fieldname": "mobile_number",
    "fieldtype": "Phone",
    "in_list_view": 1,
-   "label": "Mobile Number",
-   "reqd": 1
+   "label": "Mobile Number"
   },
   {
    "fieldname": "email_id",
@@ -260,13 +264,6 @@
    "reqd": 1
   },
   {
-   "fieldname": "parent_profile_listing",
-   "fieldtype": "Link",
-   "ignore_user_permissions": 1,
-   "label": "Referred By",
-   "options": "TF Member Profile"
-  },
-  {
    "fieldname": "skill_rating",
    "fieldtype": "Rating",
    "label": "Skill Rating",
@@ -384,12 +381,46 @@
    "fieldname": "all_testimonials",
    "fieldtype": "HTML",
    "label": "All Testimonials"
+  },
+  {
+   "fieldname": "videos_tab",
+   "fieldtype": "Tab Break",
+   "label": "Videos"
+  },
+  {
+   "fieldname": "all_videos",
+   "fieldtype": "HTML",
+   "label": "All Videos"
+  },
+  {
+   "fieldname": "stories_tab",
+   "fieldtype": "Tab Break",
+   "label": "Stories"
+  },
+  {
+   "fieldname": "all_stories",
+   "fieldtype": "HTML",
+   "label": "All Stories"
+  },
+  {
+   "fieldname": "referred_by",
+   "fieldtype": "Link",
+   "ignore_user_permissions": 1,
+   "label": "Referred By",
+   "options": "TF Member Profile"
+  },
+  {
+   "fieldname": "source",
+   "fieldtype": "Link",
+   "label": "Source",
+   "options": "TF Source",
+   "reqd": 1
   }
  ],
  "image_field": "profile_image",
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-08-25 22:37:11.233184",
+ "modified": "2024-08-26 20:28:33.169694",
  "modified_by": "Administrator",
  "module": "Thefrappepreneur",
  "name": "TF Member Profile",
