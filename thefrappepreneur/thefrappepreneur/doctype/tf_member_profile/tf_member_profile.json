@@ -20,6 +20,8 @@
   "profile_status",
   "parent_profile_listing",
   "is_frappelancer",
+  "qr_code",
+  "testimonial_qr_code",
   "frappelancer_section",
   "available_hrs",
   "min_hrly_rate",
@@ -384,12 +386,24 @@
    "fieldname": "all_testimonials",
    "fieldtype": "HTML",
    "label": "All Testimonials"
+  },
+  {
+   "fieldname": "qr_code",
+   "fieldtype": "Data",
+   "label": " Refferal",
+   "read_only": 1
+  },
+  {
+   "fieldname": "testimonial_qr_code",
+   "fieldtype": "Data",
+   "label": "Testimonial",
+   "read_only": 1
   }
  ],
  "image_field": "profile_image",
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-08-25 22:37:11.233184",
+ "modified": "2024-09-09 12:46:43.052572",
  "modified_by": "Administrator",
  "module": "Thefrappepreneur",
  "name": "TF Member Profile",
