@@ -237,3 +237,4 @@ doc_events = {
 # }
 
 
+fixtures = [{"doctype": "Web Page", "filters": [["module" , "in" , ("Thefrappepreneur" )]]}] 
