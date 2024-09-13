@@ -20,6 +20,8 @@
   "referred_by",
   "source",
   "is_frappelancer",
+  "qr_code",
+  "testimonial_qr_code",
   "frappelancer_section",
   "mobile_number",
   "available_hrs",
@@ -415,12 +417,22 @@
    "label": "Source",
    "options": "TF Source",
    "reqd": 1
+   "fieldname": "qr_code",
+   "fieldtype": "Data",
+   "label": " Refferal",
+   "read_only": 1
+  },
+  {
+   "fieldname": "testimonial_qr_code",
+   "fieldtype": "Data",
+   "label": "Testimonial",
+   "read_only": 1
   }
  ],
  "image_field": "profile_image",
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-08-26 20:28:33.169694",
+ "modified": "2024-09-09 12:46:43.052572",
  "modified_by": "Administrator",
  "module": "Thefrappepreneur",
  "name": "TF Member Profile",

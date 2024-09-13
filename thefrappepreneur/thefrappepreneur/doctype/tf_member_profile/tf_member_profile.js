@@ -1,6 +1,5 @@
 // Copyright (c) 2024, vintrosys and contributors
 // For license information, please see license.txt
-
 frappe.ui.form.on("TF Member Profile", {
     refresh(frm) {
         frm.trigger("prepare_dashboard");
@@ -55,6 +54,90 @@ frappe.ui.form.on("TF Member Profile", {
             copyToClipboard(testimonial_link);
         });
     },
+	after_save: function(frm) {
+		// Get the base site URL
+		let site_url = window.location.origin;
+	
+		// Generate the referral link for the current document
+		let referral_link = `${site_url}/registration/new?parent_profile_listing=${frm.doc.name}`;
+	
+		// Generate the testimonial link for the current document
+		let testimonial_link = `${site_url}/app/tf-testimonial?member_id=${frm.doc.name}`;
+
+		// Make a call to update both fields in a single batch
+		frappe.call({
+			method: "frappe.client.set_value",
+			args: {
+				doctype: "TF Member Profile",
+				name: frm.doc.name,
+				fieldname: {
+					"qr_code": referral_link,
+					"testimonial_qr_code": testimonial_link
+				}
+			},
+			callback: function(response) {
+				if (!response.exc) {
+					frappe.msgprint(__('Both QR codes updated successfully.'));
+				}
+			}
+		});
+	},
+
+	
+	
+    // refresh(frm) {
+    //     // Button to generate testimonial link
+    //     frm.add_custom_button(__("Testimonial Link"), function () {
+    //         let site_url = window.location.origin;
+    //         let testimonial_link;
+
+    //         if (frm.is_new()) {
+    //             // Handle case for new document
+    //             testimonial_link = `${site_url}/app/tf-testimonial-placeholder`; // Use a placeholder URL or prompt to save first
+    //             frappe.msgprint(__("Testimonial link for new document: <a href='{0}'>{0}</a>", [testimonial_link]));
+    //         } else {
+    //             // Handle case for existing document
+    //             testimonial_link = `${site_url}/app/tf-testimonial?member_id=${frm.doc.name}`;
+    //             frappe.msgprint(__("Testimonial link is : <a href='{0}'>{0}</a>", [testimonial_link]));
+    //         }
+
+    //         function copyToClipboard(text) {
+    //             if (navigator.clipboard && typeof navigator.clipboard.writeText === 'function') {
+    //                 navigator.clipboard.writeText(text).then(() => {
+    //                     frappe.msgprint(__("Testimonial link has been copied to your clipboard : <a href='{0}'>{0}</a>", [text]));
+    //                 }).catch(err => {
+    //                     console.error('Failed to copy using Clipboard API: ', err);
+    //                     frappe.msgprint(__("Testimonial link is : <a href='{0}'>{0}</a>", [text]));
+    //                 });
+    //             } else {
+    //                 let tempInput = document.createElement("input");
+    //                 tempInput.value = text;
+    //                 document.body.appendChild(tempInput);
+    //                 tempInput.select();
+    //                 tempInput.setSelectionRange(0, 99999);
+    //                 document.execCommand("copy");
+    //                 document.body.removeChild(tempInput);
+    //                 frappe.msgprint(__("Testimonial link has been copied to your clipboard : <a href='{0}'>{0}</a>", [text]));
+    //             }
+    //         }
+
+    //         copyToClipboard(testimonial_link);
+
+    //         // Ensure that testimonial_qr_code field exists
+    //         if (frm.fields_dict['testimonial_qr_code']) {
+    //             frm.set_value('testimonial_qr_code', testimonial_link); 
+    //             frm.save_or_update();
+    //         } else {
+    //             frappe.msgprint(__("Field 'testimonial_qr_code' does not exist in this doctype."));
+    //         }
+    //     });
+    // },
+
+
+
+
+
+
     prepare_dashboard(frm) {
 		let $parent = $(frm.fields_dict["all_testimonials"].wrapper);
 		$parent.empty();
