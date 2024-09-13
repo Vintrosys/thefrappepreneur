@@ -4,7 +4,7 @@
 
 import frappe
 from frappe.website.website_generator import WebsiteGenerator
-from textblob import TextBlob
+# from textblob import TextBlob
 
 class TFTestimonial(WebsiteGenerator):
     def before_save(self):
@@ -20,22 +20,22 @@ class TFTestimonial(WebsiteGenerator):
             else:
                 try:
                     print(f"Feedback for sentiment analysis: {self.feedback}")
-                    blob = TextBlob(self.feedback)
-                    sentiment = blob.sentiment.polarity
+                #     blob = TextBlob(self.feedback)
+                #     sentiment = blob.sentiment.polarity
                     
-                    # Adjusting the sentiment polarity to rating conversion
-                    if -1 <= sentiment < -0.5:
-                        self.rating = 0.1              # For sentiment between -1 and -0.5
-                    elif -0.5 <= sentiment <= 0:
-                        self.rating = 0.2              # For sentiment between -0.5 and 0
-                    elif 0 < sentiment <= 0.25:
-                        self.rating = 0.6              # For sentiment between 0 and 0.25
-                    elif 0.25 < sentiment <= 0.5:
-                        self.rating = 0.8              # For sentiment between 0.25 and 0.5
-                    elif 0.5 < sentiment <= 1:
-                        self.rating = 1                # For sentiment between 0.5 and 1
-                    else:
-                        self.rating = 0.4              # Default rating if sentiment does not match any range
+                #     # Adjusting the sentiment polarity to rating conversion
+                #     if -1 <= sentiment < -0.5:
+                #         self.rating = 0.1              # For sentiment between -1 and -0.5
+                #     elif -0.5 <= sentiment <= 0:
+                #         self.rating = 0.2              # For sentiment between -0.5 and 0
+                #     elif 0 < sentiment <= 0.25:
+                #         self.rating = 0.6              # For sentiment between 0 and 0.25
+                #     elif 0.25 < sentiment <= 0.5:
+                #         self.rating = 0.8              # For sentiment between 0.25 and 0.5
+                #     elif 0.5 < sentiment <= 1:
+                #         self.rating = 1                # For sentiment between 0.5 and 1
+                #     else:
+                #         self.rating = 0.4              # Default rating if sentiment does not match any range
 
                 except Exception as e:
                     print(f"Error in sentiment analysis: {e}")
