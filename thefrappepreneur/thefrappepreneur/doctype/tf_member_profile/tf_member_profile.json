@@ -11,8 +11,9 @@
   "member_name",
   "member_type",
   "organization_name",
-  "current_location",
+  "country",
   "email_id",
+  "expectations",
   "column_break_igua",
   "profile_rating",
   "profile_stage",
@@ -258,15 +259,6 @@
    "options": "TF Frappe Provider Detail"
   },
   {
-   "fieldname": "current_location",
-   "fieldtype": "Link",
-   "in_list_view": 1,
-   "in_standard_filter": 1,
-   "label": "Current Location",
-   "options": "TF Location",
-   "reqd": 1
-  },
-  {
    "fieldname": "skill_rating",
    "fieldtype": "Rating",
    "label": "Skill Rating",
@@ -430,12 +422,28 @@
    "fieldtype": "Data",
    "label": "Testimonial",
    "read_only": 1
+  },
+  {
+   "description": "Mention your expectations from \"The Frappepreneur\"",
+   "fieldname": "expectations",
+   "fieldtype": "Small Text",
+   "label": "Expectations",
+   "reqd": 1
+  },
+  {
+   "fieldname": "country",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Country",
+   "options": "Country",
+   "reqd": 1
   }
  ],
  "image_field": "profile_image",
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-09-13 14:16:43.778176",
+ "modified": "2024-09-13 17:55:27.108703",
  "modified_by": "Administrator",
  "module": "Thefrappepreneur",
  "name": "TF Member Profile",
