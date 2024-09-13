@@ -121,7 +121,8 @@
    "fieldname": "mobile_number",
    "fieldtype": "Phone",
    "in_list_view": 1,
-   "label": "Mobile Number"
+   "label": "Mobile Number",
+   "reqd": 1
   },
   {
    "fieldname": "email_id",
@@ -417,8 +418,8 @@
    "label": "Source",
    "options": "TF Source",
    "reqd": 1
-},
-{
+  },
+  {
    "fieldname": "qr_code",
    "fieldtype": "Data",
    "label": " Refferal",
@@ -434,7 +435,7 @@
  "image_field": "profile_image",
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-09-09 12:46:43.052572",
+ "modified": "2024-09-13 14:16:43.778176",
  "modified_by": "Administrator",
  "module": "Thefrappepreneur",
  "name": "TF Member Profile",
