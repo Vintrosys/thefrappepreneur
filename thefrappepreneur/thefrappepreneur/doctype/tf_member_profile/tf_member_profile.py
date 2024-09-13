@@ -3,11 +3,6 @@
 
 import frappe
 from frappe.model.document import Document
-import qrcode
-from io import BytesIO
-from frappe.utils import get_site_url
-from frappe.utils.file_manager import save_file
-from urllib.parse import urljoin
 
 
 class TFMemberProfile(Document):
