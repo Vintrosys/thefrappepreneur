@@ -8,6 +8,7 @@
   "testimonial_type",
   "member_id",
   "rating",
+  "testimonial",
   "column_break_bris",
   "industry",
   "frappe_app",
@@ -126,13 +127,19 @@
    "label": "Story",
    "mandatory_depends_on": "eval:doc.testimonial_type==\"Story\"",
    "options": "URL"
+  },
+  {
+   "default": "0",
+   "fieldname": "testimonial",
+   "fieldtype": "Check",
+   "label": "Testimonial"
   }
  ],
  "has_web_view": 1,
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-09-03 15:21:26.309591",
+ "modified": "2024-09-13 18:46:46.906678",
  "modified_by": "Administrator",
  "module": "Thefrappepreneur",
  "name": "TF Testimonial",
