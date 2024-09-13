@@ -19,7 +19,7 @@
  "list_columns": [],
  "login_required": 0,
  "max_attachment_size": 0,
- "modified": "2024-09-13 17:56:33.769432",
+ "modified": "2024-09-13 18:21:57.459894",
  "modified_by": "Administrator",
  "module": "Thefrappepreneur",
  "name": "registration",
@@ -29,7 +29,7 @@
  "show_attachments": 0,
  "show_list": 0,
  "show_sidebar": 0,
- "title": "Welcome to The Frappepreneur",
+ "title": "Welcome to The Frappepreneur \ud83d\ude80",
  "web_form_fields": [
   {
    "allow_read_on_all_link_options": 0,
