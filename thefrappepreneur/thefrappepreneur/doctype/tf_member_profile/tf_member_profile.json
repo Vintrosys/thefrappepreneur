@@ -302,8 +302,7 @@
   {
    "fieldname": "description",
    "fieldtype": "Small Text",
-   "label": "Description",
-   "reqd": 1
+   "label": "Description"
   },
   {
    "fieldname": "other_details_section",
@@ -408,8 +407,7 @@
    "fieldname": "source",
    "fieldtype": "Link",
    "label": "Source",
-   "options": "TF Source",
-   "reqd": 1
+   "options": "TF Source"
   },
   {
    "fieldname": "qr_code",
@@ -443,7 +441,7 @@
  "image_field": "profile_image",
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-09-13 17:55:27.108703",
+ "modified": "2024-09-13 20:25:33.835178",
  "modified_by": "Administrator",
  "module": "Thefrappepreneur",
  "name": "TF Member Profile",
