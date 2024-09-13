@@ -19,7 +19,7 @@
  "list_columns": [],
  "login_required": 0,
  "max_attachment_size": 0,
- "modified": "2024-09-13 18:21:57.459894",
+ "modified": "2024-09-13 20:48:25.357608",
  "modified_by": "Administrator",
  "module": "Thefrappepreneur",
  "name": "registration",
@@ -29,6 +29,8 @@
  "show_attachments": 0,
  "show_list": 0,
  "show_sidebar": 0,
+ "success_message": "Thanks for registering with us!\n\nOur team will get back to you soon",
+ "success_title": "Hurray \ud83c\udf89",
  "title": "Welcome to The Frappepreneur \ud83d\ude80",
  "web_form_fields": [
   {
