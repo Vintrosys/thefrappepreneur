@@ -1,0 +1,79 @@
+{
+ "charts": [
+  {
+   "chart_name": "Testimonials",
+   "label": "Testimonials"
+  },
+  {
+   "chart_name": "Members Traffic",
+   "label": "Members Traffic"
+  }
+ ],
+ "content": "[{\"id\":\"TjnYeU8WoY\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Members Traffic\",\"col\":12}},{\"id\":\"JFghImsRKD\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Total Community Members\",\"col\":4}},{\"id\":\"DcFbbz8kur\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Testimonials Received\",\"col\":4}},{\"id\":\"-iXI33xzwl\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Approved Members\",\"col\":4}},{\"id\":\"ffY1A3Iomj\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Active Members\",\"col\":4}},{\"id\":\"fVC_OrHueM\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Idle Members\",\"col\":4}},{\"id\":\"-_WM7qf_R2\",\"type\":\"card\",\"data\":{\"card_name\":\"Frappe + Entrepreneur\",\"col\":4}},{\"id\":\"Aa7SoQEzaD\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"rXr73nUc0T\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Testimonials\",\"col\":12}}]",
+ "creation": "2024-08-25 22:26:17.386476",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "workflow",
+ "idx": 0,
+ "indicator_color": "",
+ "is_hidden": 0,
+ "label": "The Frappepreneur",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Frappe + Entrepreneur",
+   "link_count": 1,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Community Members",
+   "link_count": 0,
+   "link_to": "TF Member Profile",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2024-09-13 13:39:34.184133",
+ "modified_by": "Administrator",
+ "module": "Thefrappepreneur",
+ "name": "The Frappepreneur",
+ "number_cards": [
+  {
+   "label": "Total Community Members",
+   "number_card_name": "Total Community Members"
+  },
+  {
+   "label": "Testimonials Received",
+   "number_card_name": "Testimonials Received"
+  },
+  {
+   "label": "Approved Members",
+   "number_card_name": "Approved Members"
+  },
+  {
+   "label": "Active Members",
+   "number_card_name": "Active Members"
+  },
+  {
+   "label": "Idle Members",
+   "number_card_name": "Idle Members"
+  }
+ ],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [],
+ "sequence_id": 28.0,
+ "shortcuts": [],
+ "title": "The Frappepreneur"
+}
