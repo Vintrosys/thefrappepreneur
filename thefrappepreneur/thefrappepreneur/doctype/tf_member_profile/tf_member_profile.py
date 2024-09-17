@@ -29,7 +29,7 @@ class TFMemberProfile(Document):
 		self.save()
 
 		# Optionally, you can add a message or log for confirmation
-		frappe.msgprint(__('Both QR codes updated successfully.'))
+		# frappe.msgprint(__('Both QR codes updated successfully.'))
 
 	def validate(self):
 		self.update_rating()
