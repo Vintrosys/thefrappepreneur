@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "allow_import": 1,
  "allow_rename": 1,
  "autoname": "field:client_name",
  "creation": "2024-08-24 13:23:51.129631",
@@ -15,8 +16,7 @@
    "fieldname": "location",
    "fieldtype": "Link",
    "label": "Location",
-   "options": "TF Location",
-   "unique": 1
+   "options": "Country"
   },
   {
    "allow_in_quick_entry": 1,
@@ -28,7 +28,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-08-25 15:02:57.577358",
+ "modified": "2024-09-23 16:25:33.450709",
  "modified_by": "Administrator",
  "module": "Thefrappepreneur",
  "name": "TF Frappe Client",
@@ -52,5 +52,6 @@
  "quick_entry": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "track_changes": 1
 }

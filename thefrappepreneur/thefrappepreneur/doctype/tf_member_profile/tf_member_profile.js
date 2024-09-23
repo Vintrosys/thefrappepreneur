@@ -77,7 +77,7 @@ frappe.ui.form.on("TF Member Profile", {
 			},
 			callback: function(response) {
 				if (!response.exc) {
-					frappe.msgprint(__('Both QR codes updated successfully.'));
+					// frappe.msgprint(__('Both QR codes updated successfully.'));
 				}
 			}
 		});

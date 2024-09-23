@@ -23,9 +23,6 @@ class TFMemberProfile(Document):
 		# Save the document with updated fields
 		self.save()
 
-		# Optionally, you can add a message or log for confirmation
-		frappe.msgprint(__('Both QR codes updated successfully.'))
-
 	def validate(self):
 		self.update_rating()
 		self.create_user()
@@ -49,7 +46,7 @@ class TFMemberProfile(Document):
 
 
 	def create_user(self):
-		if self.profile_stage != "Approved" or self.user_id:
+		if self.profile_stage != "R" or self.user_id:
 			return
 		
 		if frappe.db.exists("User", self.email_id):
