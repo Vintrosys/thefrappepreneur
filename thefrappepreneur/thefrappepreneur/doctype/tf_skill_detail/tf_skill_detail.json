@@ -12,6 +12,7 @@
   {
    "fieldname": "rating",
    "fieldtype": "Rating",
+   "hidden": 1,
    "in_list_view": 1,
    "label": "Rating",
    "read_only": 1
@@ -28,7 +29,7 @@
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2024-08-25 17:25:42.687638",
+ "modified": "2024-09-24 09:57:01.774284",
  "modified_by": "Administrator",
  "module": "Thefrappepreneur",
  "name": "TF Skill Detail",

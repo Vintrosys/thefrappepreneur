@@ -238,3 +238,7 @@ doc_events = {
 
 
 fixtures = [{"doctype": "Print Format", "filters": [["module" , "in" , ("Thefrappepreneur" )]]}] 
+
+has_permission = {
+    "TF Member Profile": "thefrappepreneur.thefrappepreneur.permissions.permissions.set_doc_permisssion",
+}

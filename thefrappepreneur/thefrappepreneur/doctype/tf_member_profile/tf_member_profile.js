@@ -3,56 +3,56 @@
 frappe.ui.form.on("TF Member Profile", {
     refresh(frm) {
         frm.trigger("prepare_dashboard");
-        frm.add_custom_button(__("Referral Link"), function () {
-            let site_url = window.location.origin;
-            let referral_link = `${site_url}/registration/new?referred_by=${frm.doc.name}`;
+    //     frm.add_custom_button(__("Referral Link"), function () {
+    //         let site_url = window.location.origin;
+    //         let referral_link = `${site_url}/registration/new?referred_by=${frm.doc.name}`;
 
-            function copyToClipboard(text) {
-                if (navigator.clipboard && typeof navigator.clipboard.writeText === 'function') {
-                    navigator.clipboard.writeText(text).then(() => {
-                        frappe.msgprint(__("Referral link has been copied to your clipboard"));
-                    }).catch(err => {
-                        console.error('Failed to copy using Clipboard API: ', err);
-                    });
-                } else {
-                    let tempInput = document.createElement("input");
-                    tempInput.value = text;
-                    document.body.appendChild(tempInput);
-                    tempInput.select();
-                    tempInput.setSelectionRange(0, 99999);
-                    document.execCommand("copy");
-                    document.body.removeChild(tempInput);
-                    frappe.msgprint(__("Referral link has been copied to your clipboard"));
-                }
-            }
+    //         function copyToClipboard(text) {
+    //             if (navigator.clipboard && typeof navigator.clipboard.writeText === 'function') {
+    //                 navigator.clipboard.writeText(text).then(() => {
+    //                     frappe.msgprint(__("Referral link has been copied to your clipboard"));
+    //                 }).catch(err => {
+    //                     console.error('Failed to copy using Clipboard API: ', err);
+    //                 });
+    //             } else {
+    //                 let tempInput = document.createElement("input");
+    //                 tempInput.value = text;
+    //                 document.body.appendChild(tempInput);
+    //                 tempInput.select();
+    //                 tempInput.setSelectionRange(0, 99999);
+    //                 document.execCommand("copy");
+    //                 document.body.removeChild(tempInput);
+    //                 frappe.msgprint(__("Referral link has been copied to your clipboard"));
+    //             }
+    //         }
 
-            copyToClipboard(referral_link);
-        });
-		frm.add_custom_button(__("Get Testimonial"), function () {
-            let site_url = window.location.origin;
-            let testimonial_link = `${site_url}/testimonial/new?member_id=${frm.doc.name}`;
+    //         copyToClipboard(referral_link);
+    //     });
+	// 	frm.add_custom_button(__("Get Testimonial"), function () {
+    //         let site_url = window.location.origin;
+    //         let testimonial_link = `${site_url}/testimonial/new?member_id=${frm.doc.name}`;
 
-            function copyToClipboard(text) {
-                if (navigator.clipboard && typeof navigator.clipboard.writeText === 'function') {
-                    navigator.clipboard.writeText(text).then(() => {
-                        frappe.msgprint(__("Testimonial link has been copied to your clipboard"));
-                    }).catch(err => {
-                        console.error('Failed to copy using Clipboard API: ', err);
-                    });
-                } else {
-                    let tempInput = document.createElement("input");
-                    tempInput.value = text;
-                    document.body.appendChild(tempInput);
-                    tempInput.select();
-                    tempInput.setSelectionRange(0, 99999);
-                    document.execCommand("copy");
-                    document.body.removeChild(tempInput);
-                    frappe.msgprint(__("Testimonial link has been copied to your clipboard "));
-                }
-            }
+    //         function copyToClipboard(text) {
+    //             if (navigator.clipboard && typeof navigator.clipboard.writeText === 'function') {
+    //                 navigator.clipboard.writeText(text).then(() => {
+    //                     frappe.msgprint(__("Testimonial link has been copied to your clipboard"));
+    //                 }).catch(err => {
+    //                     console.error('Failed to copy using Clipboard API: ', err);
+    //                 });
+    //             } else {
+    //                 let tempInput = document.createElement("input");
+    //                 tempInput.value = text;
+    //                 document.body.appendChild(tempInput);
+    //                 tempInput.select();
+    //                 tempInput.setSelectionRange(0, 99999);
+    //                 document.execCommand("copy");
+    //                 document.body.removeChild(tempInput);
+    //                 frappe.msgprint(__("Testimonial link has been copied to your clipboard "));
+    //             }
+    //         }
 
-            copyToClipboard(testimonial_link);
-        });
+    //         copyToClipboard(testimonial_link);
+    //     });
     },
 	after_save: function(frm) {
 		// Get the base site URL
@@ -132,9 +132,6 @@ frappe.ui.form.on("TF Member Profile", {
     //         }
     //     });
     // },
-
-
-
 
 
 

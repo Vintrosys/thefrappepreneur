@@ -13,6 +13,7 @@
   {
    "fieldname": "rating",
    "fieldtype": "Rating",
+   "hidden": 1,
    "in_list_view": 1,
    "label": "Rating",
    "permlevel": 1
@@ -28,7 +29,7 @@
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2024-08-25 16:09:19.330501",
+ "modified": "2024-09-24 10:03:15.246460",
  "modified_by": "Administrator",
  "module": "Thefrappepreneur",
  "name": "TF Frappe App Detail",
