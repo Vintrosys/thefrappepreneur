@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "allow_import": 1,
  "allow_rename": 1,
  "autoname": "field:frappe_app",
  "creation": "2024-08-24 13:08:25.908627",
@@ -68,7 +69,7 @@
  "index_web_pages_for_search": 1,
  "is_tree": 1,
  "links": [],
- "modified": "2024-08-25 17:44:33.178691",
+ "modified": "2024-09-23 14:32:42.087301",
  "modified_by": "Administrator",
  "module": "Thefrappepreneur",
  "name": "TF Frappe App",
@@ -92,5 +93,6 @@
  "quick_entry": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "track_changes": 1
 }

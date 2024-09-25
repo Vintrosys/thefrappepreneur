@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "allow_import": 1,
  "allow_rename": 1,
  "autoname": "field:area_of_interest",
  "creation": "2024-08-24 12:47:57.742906",
@@ -19,7 +20,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-08-24 12:49:00.378066",
+ "modified": "2024-09-23 16:39:48.262736",
  "modified_by": "Administrator",
  "module": "Thefrappepreneur",
  "name": "TF Area of Interest",

@@ -71,6 +71,7 @@
    "default": "0",
    "fieldname": "is_frappelancer",
    "fieldtype": "Check",
+   "hidden": 1,
    "label": "Is Frappelancer"
   },
   {
@@ -217,7 +218,8 @@
   },
   {
    "fieldname": "section_break_jqte",
-   "fieldtype": "Section Break"
+   "fieldtype": "Section Break",
+   "hidden": 1
   },
   {
    "fieldname": "column_break_hoit",
@@ -261,6 +263,7 @@
   {
    "fieldname": "skill_rating",
    "fieldtype": "Rating",
+   "hidden": 1,
    "label": "Skill Rating",
    "permlevel": 1,
    "read_only": 1
@@ -268,6 +271,7 @@
   {
    "fieldname": "contribution_rating",
    "fieldtype": "Rating",
+   "hidden": 1,
    "label": "Contribution Rating",
    "permlevel": 1,
    "read_only": 1
@@ -275,6 +279,7 @@
   {
    "fieldname": "industry_rating",
    "fieldtype": "Rating",
+   "hidden": 1,
    "label": "Industry Rating",
    "permlevel": 1,
    "read_only": 1
@@ -282,6 +287,7 @@
   {
    "fieldname": "frappe_apps_rating",
    "fieldtype": "Rating",
+   "hidden": 1,
    "label": "Frappe Apps Rating",
    "permlevel": 1,
    "read_only": 1
@@ -289,6 +295,7 @@
   {
    "fieldname": "profile_rating",
    "fieldtype": "Rating",
+   "hidden": 1,
    "in_standard_filter": 1,
    "label": "Profile Rating",
    "permlevel": 1,
@@ -314,6 +321,7 @@
    "depends_on": "eval: doc.is_frappelancer",
    "fieldname": "frappelancer_section",
    "fieldtype": "Section Break",
+   "hidden": 1,
    "label": "Frappelancer",
    "mandatory_depends_on": "eval: doc.is_frappelancer"
   },
@@ -362,6 +370,7 @@
   {
    "fieldname": "erp_module_rating",
    "fieldtype": "Rating",
+   "hidden": 1,
    "label": "ERPNext Module Rating",
    "permlevel": 1,
    "read_only": 1
@@ -369,6 +378,7 @@
   {
    "fieldname": "testimonials_tab",
    "fieldtype": "Tab Break",
+   "hidden": 1,
    "label": "Testimonials"
   },
   {
@@ -379,6 +389,7 @@
   {
    "fieldname": "videos_tab",
    "fieldtype": "Tab Break",
+   "hidden": 1,
    "label": "Videos"
   },
   {
@@ -389,6 +400,7 @@
   {
    "fieldname": "stories_tab",
    "fieldtype": "Tab Break",
+   "hidden": 1,
    "label": "Stories"
   },
   {
@@ -412,12 +424,14 @@
   {
    "fieldname": "qr_code",
    "fieldtype": "Data",
+   "hidden": 1,
    "label": " Refferal",
    "read_only": 1
   },
   {
    "fieldname": "testimonial_qr_code",
    "fieldtype": "Data",
+   "hidden": 1,
    "label": "Testimonial",
    "read_only": 1
   },
@@ -441,7 +455,7 @@
  "image_field": "profile_image",
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-09-13 20:46:04.677461",
+ "modified": "2024-09-24 17:49:58.333973",
  "modified_by": "Administrator",
  "module": "Thefrappepreneur",
  "name": "TF Member Profile",

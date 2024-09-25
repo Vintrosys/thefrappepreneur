@@ -23,9 +23,6 @@ class TFMemberProfile(Document):
 		# Save the document with updated fields
 		self.save()
 
-		# Optionally, you can add a message or log for confirmation
-		frappe.msgprint(__('Both QR codes updated successfully.'))
-
 	def validate(self):
 		self.update_rating()
 		self.create_user()
@@ -49,13 +46,15 @@ class TFMemberProfile(Document):
 
 
 	def create_user(self):
-		if self.profile_stage != "Approved" or self.user_id:
+		if self.user_id:
 			return
-		
+
+		# Check if the user already exists by email
 		if frappe.db.exists("User", self.email_id):
 			self.user_id = frappe.db.exists("User", self.email_id)
 			return
 
+		# Split the member's full name into first, middle, and last names
 		pcm = self.member_name.split(" ")
 		middle_name = last_name = ""
 
@@ -67,6 +66,7 @@ class TFMemberProfile(Document):
 
 		first_name = pcm[0]
 
+		# Create a new User document
 		user = frappe.new_doc("User")
 		user.update(
 			{
@@ -80,8 +80,22 @@ class TFMemberProfile(Document):
 				"bio": self.description,
 			}
 		)
+		
+		# Insert the user document into the database
 		user.insert()
+
+		# Assign the created user's ID to the user_id field
 		self.user_id = user.name
+
+		# Assign the "TF Member" role
+		user.add_roles("TF Member")
+
+		# Set the role profile name to "TF Member"
+		user.role_profile_name = "TF Member"
+		user.save()
+		frappe.msgprint(f"User '{self.member_name}' created successfully with the 'TF Member' role.")
+
+
 
 @frappe.whitelist()
 def get_testimonials():
