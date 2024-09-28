@@ -70,8 +70,7 @@
    "label": "Profile Stage",
    "options": "Registered\nApproved",
    "permlevel": 1,
-   "read_only": 1,
-   "reqd": 1
+   "read_only": 1
   },
   {
    "default": "Open",
@@ -409,7 +408,7 @@
  "image_field": "profile_image",
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-09-28 12:10:42.942556",
+ "modified": "2024-09-28 12:21:15.299132",
  "modified_by": "Administrator",
  "module": "Thefrappepreneur",
  "name": "TF Member Profile",
