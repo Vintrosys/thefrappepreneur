@@ -5,5 +5,5 @@
 from frappe.model.document import Document
 
 
-class TFSource(Document):
+class TFCity(Document):
 	pass

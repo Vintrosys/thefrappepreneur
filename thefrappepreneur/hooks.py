@@ -132,11 +132,11 @@ after_install = "thefrappepreneur.setup.after_install"
 # }
 
 # In your custom app's hooks.py
-doc_events = {
-    "TF Member Profile": {
-        "after_save": "thefrappepreneur/update_qr_codes"
-    }
-}
+# doc_events = {
+#     "TF Member Profile": {
+#         "after_save": "thefrappepreneur/update_qr_codes"
+#     }
+# }
 
 
 # Scheduled Tasks

@@ -7,28 +7,40 @@
  "engine": "InnoDB",
  "field_order": [
   "client_name",
-  "location"
+  "location",
+  "city"
  ],
  "fields": [
   {
    "allow_in_quick_entry": 1,
    "fieldname": "location",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Location",
-   "options": "TF Location",
+   "options": "Country",
+   "reqd": 1,
    "unique": 1
   },
   {
    "allow_in_quick_entry": 1,
    "fieldname": "client_name",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "Client Name",
+   "reqd": 1,
    "unique": 1
+  },
+  {
+   "fieldname": "city",
+   "fieldtype": "Link",
+   "label": "City",
+   "options": "TF City",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-08-25 15:02:57.577358",
+ "modified": "2024-09-28 07:49:37.025762",
  "modified_by": "Administrator",
  "module": "Thefrappepreneur",
  "name": "TF Frappe Client",

@@ -11,28 +11,21 @@
   "member_name",
   "member_type",
   "organization_name",
-  "country",
   "email_id",
-  "expectations",
+  "mobile_number",
+  "country",
+  "city",
   "column_break_igua",
+  "disabled",
   "profile_rating",
   "profile_stage",
   "profile_status",
   "referred_by",
-  "source",
-  "is_frappelancer",
+  "other_details_section",
   "qr_code",
   "testimonial_qr_code",
-  "frappelancer_section",
-  "mobile_number",
-  "available_hrs",
-  "min_hrly_rate",
-  "max_hrly_rate",
-  "column_break_phxa",
-  "bulk_package_hrs",
-  "bulk_package_cost",
-  "other_details_section",
   "user_id",
+  "expectations",
   "profile_image",
   "about_tab",
   "description",
@@ -67,12 +60,6 @@
   "all_stories"
  ],
  "fields": [
-  {
-   "default": "0",
-   "fieldname": "is_frappelancer",
-   "fieldtype": "Check",
-   "label": "Is Frappelancer"
-  },
   {
    "default": "Registered",
    "fieldname": "profile_stage",
@@ -239,7 +226,7 @@
    "options": "User"
   },
   {
-   "depends_on": "eval: doc.member_type == \"Client\" || doc.member_type == \"Professional\" || doc.member_type == \"Providers\"",
+   "depends_on": "eval: doc.member_type == \"End User\" || doc.member_type == \"Working Professional\" || doc.member_type == \"Service Provider\"",
    "fieldname": "organization_name",
    "fieldtype": "Data",
    "label": "Organization Name"
@@ -311,48 +298,6 @@
    "label": "Other Details"
   },
   {
-   "depends_on": "eval: doc.is_frappelancer",
-   "fieldname": "frappelancer_section",
-   "fieldtype": "Section Break",
-   "label": "Frappelancer",
-   "mandatory_depends_on": "eval: doc.is_frappelancer"
-  },
-  {
-   "description": "Per Day",
-   "fieldname": "available_hrs",
-   "fieldtype": "Float",
-   "label": "Available Hrs",
-   "mandatory_depends_on": "eval: doc.is_frappelancer"
-  },
-  {
-   "description": "Per Hour",
-   "fieldname": "min_hrly_rate",
-   "fieldtype": "Currency",
-   "label": "Min Rate",
-   "mandatory_depends_on": "eval: doc.is_frappelancer"
-  },
-  {
-   "description": "Per Hour",
-   "fieldname": "max_hrly_rate",
-   "fieldtype": "Currency",
-   "label": "Max Rate",
-   "mandatory_depends_on": "eval: doc.is_frappelancer"
-  },
-  {
-   "fieldname": "bulk_package_hrs",
-   "fieldtype": "Float",
-   "label": "Bulk Package Hrs"
-  },
-  {
-   "fieldname": "column_break_phxa",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "bulk_package_cost",
-   "fieldtype": "Currency",
-   "label": "Bulk Package Cost"
-  },
-  {
    "allow_bulk_edit": 1,
    "fieldname": "erp_module",
    "fieldtype": "Table",
@@ -369,6 +314,7 @@
   {
    "fieldname": "testimonials_tab",
    "fieldtype": "Tab Break",
+   "hidden": 1,
    "label": "Testimonials"
   },
   {
@@ -379,6 +325,7 @@
   {
    "fieldname": "videos_tab",
    "fieldtype": "Tab Break",
+   "hidden": 1,
    "label": "Videos"
   },
   {
@@ -389,6 +336,7 @@
   {
    "fieldname": "stories_tab",
    "fieldtype": "Tab Break",
+   "hidden": 1,
    "label": "Stories"
   },
   {
@@ -399,15 +347,9 @@
   {
    "fieldname": "referred_by",
    "fieldtype": "Link",
-   "ignore_user_permissions": 1,
    "label": "Referred By",
-   "options": "TF Member Profile"
-  },
-  {
-   "fieldname": "source",
-   "fieldtype": "Link",
-   "label": "Source",
-   "options": "TF Source"
+   "options": "TF Member Profile",
+   "read_only": 1
   },
   {
    "fieldname": "qr_code",
@@ -436,12 +378,26 @@
    "label": "Country",
    "options": "Country",
    "reqd": 1
+  },
+  {
+   "fieldname": "city",
+   "fieldtype": "Link",
+   "label": "City",
+   "options": "TF City",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "disabled",
+   "fieldtype": "Check",
+   "label": "Disabled",
+   "permlevel": 1
   }
  ],
  "image_field": "profile_image",
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-09-13 20:46:04.677461",
+ "modified": "2024-09-28 08:11:29.735710",
  "modified_by": "Administrator",
  "module": "Thefrappepreneur",
  "name": "TF Member Profile",
@@ -499,6 +455,7 @@
  ],
  "quick_entry": 1,
  "search_fields": "member_name, member_type",
+ "show_title_field_in_link": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],

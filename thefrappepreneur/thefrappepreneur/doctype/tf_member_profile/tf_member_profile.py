@@ -7,24 +7,25 @@ from frappe.model.document import Document
 
 class TFMemberProfile(Document):
 	def after_save(self):
-		# Get the base site URL
-		site_url = frappe.utils.get_url()
+		pass
+		# # Get the base site URL
+		# site_url = frappe.utils.get_url()
 
-		# Generate the referral link for the current document
-		referral_link = f"{site_url}/registration/new?parent_profile_listing={self.name}"
+		# # Generate the referral link for the current document
+		# referral_link = f"{site_url}/registration/new?parent_profile_listing={self.name}"
 
-		# Generate the testimonial link for the current document
-		testimonial_link = f"{site_url}/app/tf-testimonial?member_id={self.name}"
+		# # Generate the testimonial link for the current document
+		# testimonial_link = f"{site_url}/app/tf-testimonial?member_id={self.name}"
 
-		# Update both fields in the current document
-		self.qr_code = referral_link
-		self.testimonial_qr_code = testimonial_link
+		# # Update both fields in the current document
+		# self.qr_code = referral_link
+		# self.testimonial_qr_code = testimonial_link
 
-		# Save the document with updated fields
-		self.save()
+		# # Save the document with updated fields
+		# self.save()
 
-		# Optionally, you can add a message or log for confirmation
-		frappe.msgprint(__('Both QR codes updated successfully.'))
+		# # Optionally, you can add a message or log for confirmation
+		# frappe.msgprint(__('Both QR codes updated successfully.'))
 
 	def validate(self):
 		self.update_rating()

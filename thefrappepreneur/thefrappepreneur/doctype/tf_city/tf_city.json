@@ -1,30 +1,29 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "field:source",
- "creation": "2024-08-26 20:13:26.152662",
+ "autoname": "field:city",
+ "creation": "2024-09-28 06:49:48.132010",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "source"
+  "city"
  ],
  "fields": [
   {
-   "allow_in_quick_entry": 1,
-   "fieldname": "source",
+   "fieldname": "city",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Source",
+   "label": "City",
    "reqd": 1,
    "unique": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-08-26 20:14:24.598827",
+ "modified": "2024-09-28 06:50:34.430853",
  "modified_by": "Administrator",
  "module": "Thefrappepreneur",
- "name": "TF Source",
+ "name": "TF City",
  "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
