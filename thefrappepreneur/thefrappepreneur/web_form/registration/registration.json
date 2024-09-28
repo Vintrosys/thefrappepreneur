@@ -19,7 +19,7 @@
  "list_columns": [],
  "login_required": 0,
  "max_attachment_size": 0,
- "modified": "2024-09-28 06:33:41.612601",
+ "modified": "2024-09-28 10:35:18.116259",
  "modified_by": "Administrator",
  "module": "Thefrappepreneur",
  "name": "registration",
@@ -155,6 +155,19 @@
    "precision": "",
    "read_only": 0,
    "reqd": 0,
+   "show_in_filter": 0
+  },
+  {
+   "allow_read_on_all_link_options": 0,
+   "fieldname": "year_of_experience",
+   "fieldtype": "Float",
+   "hidden": 0,
+   "label": "Year of Experience",
+   "max_length": 0,
+   "max_value": 0,
+   "precision": "",
+   "read_only": 0,
+   "reqd": 1,
    "show_in_filter": 0
   },
   {
