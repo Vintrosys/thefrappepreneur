@@ -75,7 +75,6 @@
   },
   {
    "default": "Open",
-   "depends_on": "eval: doc.profile_stage == \"Approved\"",
    "fieldname": "profile_status",
    "fieldtype": "Select",
    "in_standard_filter": 1,
@@ -410,7 +409,7 @@
  "image_field": "profile_image",
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-09-28 10:50:38.057480",
+ "modified": "2024-09-28 12:10:42.942556",
  "modified_by": "Administrator",
  "module": "Thefrappepreneur",
  "name": "TF Member Profile",
