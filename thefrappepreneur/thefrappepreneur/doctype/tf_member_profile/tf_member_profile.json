@@ -129,7 +129,6 @@
    "reqd": 1
   },
   {
-   "allow_bulk_edit": 1,
    "fieldname": "language",
    "fieldtype": "Table",
    "label": "Language",
@@ -141,7 +140,6 @@
    "label": "Social Profiles"
   },
   {
-   "allow_bulk_edit": 1,
    "fieldname": "pcm_social_profiles",
    "fieldtype": "Table",
    "label": "Social Profiles",
@@ -164,7 +162,6 @@
    "label": "Skills"
   },
   {
-   "allow_bulk_edit": 1,
    "fieldname": "pcm_skills",
    "fieldtype": "Table",
    "label": "Skills",
@@ -177,7 +174,6 @@
    "label": "Contribution"
   },
   {
-   "allow_bulk_edit": 1,
    "fieldname": "pcm_contribution",
    "fieldtype": "Table",
    "label": "Contribution",
@@ -189,14 +185,12 @@
    "label": "More Information"
   },
   {
-   "allow_bulk_edit": 1,
    "fieldname": "industry",
    "fieldtype": "Table",
    "label": "Industry",
    "options": "TF Industry Detail"
   },
   {
-   "allow_bulk_edit": 1,
    "fieldname": "frappe_apps",
    "fieldtype": "Table",
    "label": "Frappe Apps",
@@ -232,14 +226,12 @@
    "label": "Organization Name"
   },
   {
-   "allow_bulk_edit": 1,
    "fieldname": "pcm_clients",
    "fieldtype": "Table",
    "label": "Clients",
    "options": "TF Client Detail"
   },
   {
-   "allow_bulk_edit": 1,
    "fieldname": "pcm_frappe_provider",
    "fieldtype": "Table",
    "label": "Frappe Provider",
@@ -297,7 +289,6 @@
    "label": "Other Details"
   },
   {
-   "allow_bulk_edit": 1,
    "fieldname": "erp_module",
    "fieldtype": "Table",
    "label": "ERP Module",
@@ -408,7 +399,7 @@
  "image_field": "profile_image",
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-09-28 12:41:12.869572",
+ "modified": "2024-09-28 14:56:24.967722",
  "modified_by": "Administrator",
  "module": "Thefrappepreneur",
  "name": "TF Member Profile",
