@@ -79,10 +79,21 @@ class TFMemberProfile(Document):
 				"last_name": last_name,
 				"phone": self.mobile_number,
 				"bio": self.description,
+				"role_profile_name": "Community Member"
 			}
 		)
 		user.insert()
 		self.user_id = user.name
+
+		user_perm = frappe.new_doc("User Permission")
+		user_perm.update(
+			{
+				"user": user.name,
+				"allow": "TF Member Profile",
+				"for_value": self.name
+			}
+		)
+		user_perm.insert()
 
 @frappe.whitelist()
 def get_testimonials():
