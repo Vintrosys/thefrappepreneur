@@ -18,7 +18,9 @@
    "allow_in_quick_entry": 1,
    "fieldname": "skill",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "Skill",
+   "reqd": 1,
    "unique": 1
   },
   {
@@ -38,6 +40,8 @@
    "read_only": 1
   },
   {
+   "allow_in_quick_entry": 1,
+   "default": "0",
    "fieldname": "is_group",
    "fieldtype": "Check",
    "label": "Is Group"
@@ -49,6 +53,7 @@
    "options": "TF Skill"
   },
   {
+   "allow_in_quick_entry": 1,
    "fieldname": "parent_tf_skill",
    "fieldtype": "Link",
    "ignore_user_permissions": 1,
@@ -59,7 +64,7 @@
  "index_web_pages_for_search": 1,
  "is_tree": 1,
  "links": [],
- "modified": "2024-08-25 16:52:27.393027",
+ "modified": "2024-09-28 13:23:06.687304",
  "modified_by": "Administrator",
  "module": "Thefrappepreneur",
  "name": "TF Skill",

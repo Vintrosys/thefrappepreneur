@@ -73,12 +73,12 @@
    "read_only": 1
   },
   {
-   "default": "Open",
+   "default": "Idle",
    "fieldname": "profile_status",
    "fieldtype": "Select",
    "in_standard_filter": 1,
    "label": "Profile Status",
-   "options": "Open\nActive\nIdle",
+   "options": "Active\nIdle",
    "reqd": 1
   },
   {
@@ -408,7 +408,7 @@
  "image_field": "profile_image",
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-09-28 12:21:15.299132",
+ "modified": "2024-09-28 12:41:12.869572",
  "modified_by": "Administrator",
  "module": "Thefrappepreneur",
  "name": "TF Member Profile",
