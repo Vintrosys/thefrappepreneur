@@ -1,13 +1,13 @@
 {
  "actions": [],
- "autoname": "autoincrement",
+ "autoname": "field:provider_name",
  "creation": "2024-08-24 13:27:31.553969",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
   "provider_name",
-  "location",
-  "city"
+  "city",
+  "country"
  ],
  "fields": [
   {
@@ -20,30 +20,29 @@
    "unique": 1
   },
   {
-   "allow_in_quick_entry": 1,
-   "fieldname": "location",
-   "fieldtype": "Link",
-   "in_list_view": 1,
-   "label": "Location",
-   "options": "TF Location",
-   "reqd": 1,
-   "unique": 1
-  },
-  {
    "fieldname": "city",
    "fieldtype": "Link",
    "label": "City",
    "options": "TF City",
    "reqd": 1
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "country",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Country",
+   "options": "Country",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-09-28 07:48:49.210511",
+ "modified": "2024-09-28 15:21:49.208239",
  "modified_by": "Administrator",
  "module": "Thefrappepreneur",
  "name": "TF Frappe Provider",
- "naming_rule": "Autoincrement",
+ "naming_rule": "By fieldname",
  "nsm_parent_field": "parent_skill_type",
  "owner": "Administrator",
  "permissions": [

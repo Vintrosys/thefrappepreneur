@@ -18,8 +18,7 @@
    "in_list_view": 1,
    "label": "Location",
    "options": "Country",
-   "reqd": 1,
-   "unique": 1
+   "reqd": 1
   },
   {
    "allow_in_quick_entry": 1,
@@ -40,7 +39,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-09-28 07:49:37.025762",
+ "modified": "2024-09-28 15:20:55.876963",
  "modified_by": "Administrator",
  "module": "Thefrappepreneur",
  "name": "TF Frappe Client",
